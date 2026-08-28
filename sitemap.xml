@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://roberthcastrop.com/</loc>
-  </url>
-  <url>
-    <loc>https://roberthcastrop.com/miami-realtor/</loc>
-  </url>
+
+  <url><loc>https://roberthcastrop.com/</loc></url>
+
+  <url><loc>https://roberthcastrop.com/miami-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/coral-gables-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/coconut-grove-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/pinecrest-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/brickell-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/miami-beach-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/key-biscayne-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/aventura-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/sunny-isles-beach-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/palmetto-bay-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/doral-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/cutler-bay-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/kendall-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/miami-lakes-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/homestead-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/miramar-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/pembroke-pines-realtor/</loc></url>
+  <url><loc>https://roberthcastrop.com/weston-realtor/</loc></url>
+
+  <url><loc>https://roberthcastrop.com/sell-your-home-miami/</loc></url>
+  <url><loc>https://roberthcastrop.com/miami-luxury-real-estate/</loc></url>
+  <url><loc>https://roberthcastrop.com/miami-investment-properties/</loc></url>
+
+</urlset>
