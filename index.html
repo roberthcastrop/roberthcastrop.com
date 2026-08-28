@@ -17,16 +17,12 @@
   --white:#ffffff;
   --text:#14202e;
   --gray:#68717c;
-  --light:#f7f7f5;
+  --light:#f6f6f4;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
@@ -56,7 +52,7 @@ header{
   width:100%;
   z-index:10;
   padding:22px 0;
-  color:white;
+  color:#fff;
 }
 
 nav{
@@ -69,6 +65,7 @@ nav{
   display:flex;
   align-items:center;
   gap:14px;
+  color:#fff;
   font-weight:bold;
   letter-spacing:1px;
 }
@@ -90,7 +87,7 @@ nav{
 .menu{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:28px;
   font-size:13px;
   font-weight:bold;
 }
@@ -107,15 +104,15 @@ nav{
   min-height:700px;
   display:flex;
   align-items:center;
-  color:white;
+  color:#fff;
 
   background:
   linear-gradient(
     90deg,
-    rgba(3,15,28,.82),
-    rgba(3,15,28,.18)
+    rgba(3,15,28,.86),
+    rgba(3,15,28,.20)
   ),
-  url("images/luxury-home.jpg");
+  url("luxury-home.jpg");
 
   background-size:cover;
   background-position:center;
@@ -144,7 +141,7 @@ nav{
 
 .hero p{
   font-size:20px;
-  margin-bottom:30px;
+  margin:0 0 30px;
 }
 
 .buttons{
@@ -157,14 +154,14 @@ nav{
   display:inline-block;
   padding:15px 24px;
   background:var(--navy);
-  color:white;
+  color:#fff;
   font-size:12px;
   font-weight:bold;
   letter-spacing:.5px;
 }
 
 .btn-white{
-  background:white;
+  background:#fff;
   color:var(--navy);
 }
 
@@ -192,13 +189,14 @@ nav{
 }
 
 .service-icon{
-  font-size:34px;
-  margin-bottom:18px;
+  font-size:32px;
+  margin-bottom:16px;
+  color:var(--navy);
 }
 
 .service h3{
   font-size:14px;
-  margin-bottom:10px;
+  margin:0 0 10px;
 }
 
 .service p{
@@ -255,10 +253,9 @@ nav{
   content:"";
   position:absolute;
   inset:0;
-  background:
-  linear-gradient(
-    transparent 45%,
-    rgba(3,15,28,.9)
+  background:linear-gradient(
+    transparent 40%,
+    rgba(3,15,28,.88)
   );
 }
 
@@ -267,7 +264,7 @@ nav{
   z-index:2;
   left:22px;
   bottom:22px;
-  color:white;
+  color:#fff;
   font-weight:bold;
   font-size:18px;
 }
@@ -286,40 +283,45 @@ nav{
 }
 
 
-/* PROPERTY / SERVICES */
+/* BUY SELL INVEST */
 
-.properties{
+.opportunities{
   background:var(--light);
 }
 
-.property-grid{
+.opportunity-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
 
-.property-card{
-  background:white;
+.opportunity-card{
+  background:#fff;
+  transition:.25s;
 }
 
-.property-card img{
+.opportunity-card:hover{
+  transform:translateY(-4px);
+}
+
+.opportunity-card img{
   width:100%;
   height:260px;
   object-fit:cover;
 }
 
-.property-info{
-  padding:20px;
+.opportunity-info{
+  padding:22px;
 }
 
-.property-info h3{
+.opportunity-info h3{
   font-family:Georgia,serif;
   font-size:24px;
   font-weight:normal;
   margin:0 0 8px;
 }
 
-.property-info p{
+.opportunity-info p{
   color:var(--gray);
   font-size:14px;
   line-height:1.6;
@@ -336,14 +338,14 @@ nav{
 }
 
 .about-photo{
-  background-image:url("images/roberth-award.jpg");
+  background-image:url("award.jpg");
   background-size:cover;
   background-position:center;
 }
 
 .about-content{
   background:var(--navy);
-  color:white;
+  color:#fff;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -362,7 +364,45 @@ nav{
   max-width:520px;
   color:#e5e9ed;
   line-height:1.7;
-  margin-bottom:25px;
+  margin:0 0 25px;
+}
+
+
+/* MORE AREAS */
+
+.more-areas{
+  padding:60px 0;
+  background:#fff;
+}
+
+.more-areas h2{
+  text-align:center;
+  font-family:Georgia,serif;
+  font-size:34px;
+  font-weight:normal;
+  margin:0 0 28px;
+}
+
+.area-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.area-links a{
+  border:1px solid #d8d8d8;
+  padding:11px 16px;
+  font-size:12px;
+  transition:.2s;
+}
+
+.area-links a:hover{
+  background:var(--navy);
+  color:#fff;
+  border-color:var(--navy);
 }
 
 
@@ -371,16 +411,16 @@ nav{
 .contact{
   background:
   linear-gradient(
-    rgba(3,15,28,.8),
-    rgba(3,15,28,.8)
+    rgba(3,15,28,.82),
+    rgba(3,15,28,.82)
   ),
-  url("images/brickell.jpg");
+  url("brickell.jpg");
 
   background-size:cover;
   background-position:center;
 
-  color:white;
-  padding:55px 0;
+  color:#fff;
+  padding:60px 0;
 }
 
 .contact-row{
@@ -433,12 +473,12 @@ footer{
   }
 
   .hero h1{
-    font-size:52px;
+    font-size:50px;
   }
 
   .services-grid,
   .area-grid,
-  .property-grid,
+  .opportunity-grid,
   .about{
     grid-template-columns:1fr;
   }
@@ -468,88 +508,81 @@ footer{
   .contact-row .btn{
     margin-top:25px;
   }
-
 }
 </style>
 
 
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"RealEstateAgent",
- "name":"Roberth Castro",
- "url":"https://roberthcastrop.com/",
- "telephone":"+17862106833",
- "email":"rcastrop@kw.com",
- "areaServed":[
-   "Miami",
-   "Doral",
-   "Coral Gables",
-   "Coconut Grove",
-   "Brickell",
-   "Miami Beach",
-   "Key Biscayne",
-   "Aventura",
-   "Sunny Isles Beach",
-   "Pinecrest",
-   "Palmetto Bay",
-   "Cutler Bay",
-   "Kendall",
-   "Miami Lakes",
-   "Homestead",
-   "Miramar",
-   "Pembroke Pines",
-   "Weston"
- ]
+  "@context":"https://schema.org",
+  "@type":"RealEstateAgent",
+  "name":"Roberth Castro",
+  "url":"https://roberthcastrop.com/",
+  "telephone":"+17862106833",
+  "email":"rcastrop@kw.com",
+  "areaServed":[
+    "Miami",
+    "Doral",
+    "Coral Gables",
+    "Coconut Grove",
+    "Brickell",
+    "Miami Beach",
+    "Key Biscayne",
+    "Aventura",
+    "Sunny Isles Beach",
+    "Pinecrest",
+    "Palmetto Bay",
+    "Cutler Bay",
+    "Kendall",
+    "Miami Lakes",
+    "Homestead",
+    "Miramar",
+    "Pembroke Pines",
+    "Weston"
+  ]
 }
 </script>
 
 </head>
 
-
 <body>
 
 
 <header>
-
 <div class="container">
 
 <nav>
 
 <a class="brand" href="/">
+  <img src="logo.png" alt="Roberth Castro Logo">
 
-<img src="images/rc-logo.png" alt="Roberth Castro RC Logo">
-
-<div>
-ROBERTH CASTRO
-<small>MIAMI REAL ESTATE</small>
-</div>
-
+  <div>
+    ROBERTH CASTRO
+    <small>MIAMI REAL ESTATE</small>
+  </div>
 </a>
-
 
 <div class="menu">
 
-<a href="https://roberthcastrop.kw.com/">BUY</a>
+  <a href="https://roberthcastrop.kw.com/">BUY</a>
 
-<a href="/sell-your-home-miami/">SELL</a>
+  <a href="/sell-your-home-miami/">SELL</a>
 
-<a href="#areas">AREAS</a>
+  <a href="#areas">AREAS</a>
 
-<a href="#about">ABOUT</a>
+  <a href="#about">ABOUT</a>
 
-<a href="#contact">CONTACT</a>
+  <a href="#contact">CONTACT</a>
 
-<a href="#contact" class="work-btn">
-WORK WITH ROBERTH
-</a>
+  <a href="#contact" class="work-btn">
+    WORK WITH ROBERTH
+  </a>
 
 </div>
 
 </nav>
 
 </div>
-
 </header>
 
 
@@ -601,7 +634,6 @@ SELL YOUR HOME
 
 <div class="container services-grid">
 
-
 <div class="service">
 
 <div class="service-icon">⌂</div>
@@ -640,7 +672,6 @@ Explore opportunities across South Florida.
 
 </div>
 
-
 </div>
 
 </section>
@@ -650,7 +681,6 @@ Explore opportunities across South Florida.
 <section class="section" id="areas">
 
 <div class="container">
-
 
 <div class="section-title">
 
@@ -665,70 +695,48 @@ Featured Markets
 </div>
 
 
-
 <div class="area-grid">
 
 
-<a
-href="/brickell-realtor/"
-class="area-card">
+<a href="/brickell-realtor/" class="area-card">
 
 <img
-src="images/brickell.jpg"
+src="brickell.jpg"
 alt="Brickell Miami skyline">
 
 <div class="area-name">
-
 BRICKELL
-
-<small>
-URBAN & WATERFRONT
-</small>
-
+<small>URBAN & WATERFRONT</small>
 </div>
 
 </a>
 
 
 
-<a
-href="/miami-beach-realtor/"
-class="area-card">
+<a href="/miami-beach-realtor/" class="area-card">
 
 <img
-src="images/miami-beach.jpg"
-alt="Miami Beach Florida">
+src="hero.jpg"
+alt="Miami Beach luxury real estate">
 
 <div class="area-name">
-
 MIAMI BEACH
-
-<small>
-BEACH & LUXURY LIVING
-</small>
-
+<small>BEACH & LUXURY LIVING</small>
 </div>
 
 </a>
 
 
 
-<a
-href="/coconut-grove-realtor/"
-class="area-card">
+<a href="/coconut-grove-realtor/" class="area-card">
 
 <img
-src="images/coconut-grove.jpg"
-alt="Coconut Grove Miami">
+src="coconut-grove.jpg"
+alt="Coconut Grove marina Miami">
 
 <div class="area-name">
-
 COCONUT GROVE
-
-<small>
-MARINA & NEIGHBORHOOD LIVING
-</small>
-
+<small>MARINA & NEIGHBORHOOD LIVING</small>
 </div>
 
 </a>
@@ -739,16 +747,11 @@ MARINA & NEIGHBORHOOD LIVING
 
 <div class="center">
 
-<a
-href="/miami-realtor/"
-class="btn">
-
+<a href="/miami-realtor/" class="btn">
 EXPLORE MIAMI
-
 </a>
 
 </div>
-
 
 </div>
 
@@ -756,15 +759,14 @@ EXPLORE MIAMI
 
 
 
-<section class="section properties">
+<section class="section opportunities">
 
 <div class="container">
-
 
 <div class="section-title">
 
 <div class="eyebrow">
-REAL ESTATE SERVICES
+HOW I CAN HELP
 </div>
 
 <h2>
@@ -774,26 +776,23 @@ Buy. Sell. Invest.
 </div>
 
 
-
-<div class="property-grid">
+<div class="opportunity-grid">
 
 
 <a
 href="https://roberthcastrop.kw.com/"
-class="property-card">
+class="opportunity-card">
 
 <img
-src="images/aerial-home.jpg"
+src="aerial-home.jpg"
 alt="South Florida home with pool">
 
-<div class="property-info">
+<div class="opportunity-info">
 
-<h3>
-Find Your Home
-</h3>
+<h3>Find Your Home</h3>
 
 <p>
-Search homes throughout Miami and South Florida.
+Explore homes throughout Miami and South Florida.
 </p>
 
 </div>
@@ -804,20 +803,18 @@ Search homes throughout Miami and South Florida.
 
 <a
 href="/sell-your-home-miami/"
-class="property-card">
+class="opportunity-card">
 
 <img
-src="images/luxury-home.jpg"
-alt="Luxury Miami home">
+src="luxury-home.jpg"
+alt="Luxury South Florida home">
 
-<div class="property-info">
+<div class="opportunity-info">
 
-<h3>
-Sell Your Property
-</h3>
+<h3>Sell Your Property</h3>
 
 <p>
-Professional marketing designed to attract qualified buyers.
+Strategic marketing designed to attract qualified buyers.
 </p>
 
 </div>
@@ -828,17 +825,15 @@ Professional marketing designed to attract qualified buyers.
 
 <a
 href="/miami-investment-properties/"
-class="property-card">
+class="opportunity-card">
 
 <img
-src="images/brickell.jpg"
-alt="Miami investment properties">
+src="brickell.jpg"
+alt="Miami real estate investment">
 
-<div class="property-info">
+<div class="opportunity-info">
 
-<h3>
-Invest in Miami
-</h3>
+<h3>Invest in Miami</h3>
 
 <p>
 Explore residential investment opportunities.
@@ -859,19 +854,17 @@ Explore residential investment opportunities.
 
 <section class="about" id="about">
 
-
 <div
 class="about-photo"
 role="img"
-aria-label="Roberth Castro Keller Williams award">
+aria-label="Roberth Castro receiving Keller Williams recognition">
 </div>
-
 
 
 <div class="about-content">
 
 <div class="eyebrow">
-ABOUT ROBERTH CASTRO
+ROBERTH CASTRO
 </div>
 
 <h2>
@@ -885,18 +878,67 @@ Professional representation for buyers, sellers and investors throughout Miami a
 
 <div>
 
-<a
-href="#contact"
-class="btn btn-white">
-
+<a href="#contact" class="btn btn-white">
 CONTACT ROBERTH
-
 </a>
 
 </div>
 
 </div>
 
+</section>
+
+
+
+<section class="more-areas">
+
+<div class="container">
+
+<h2>
+Miami & South Florida Real Estate
+</h2>
+
+<div class="area-links">
+
+<a href="/miami-realtor/">Miami</a>
+
+<a href="/doral-realtor/">Doral</a>
+
+<a href="/coral-gables-realtor/">Coral Gables</a>
+
+<a href="/coconut-grove-realtor/">Coconut Grove</a>
+
+<a href="/brickell-realtor/">Brickell</a>
+
+<a href="/pinecrest-realtor/">Pinecrest</a>
+
+<a href="/palmetto-bay-realtor/">Palmetto Bay</a>
+
+<a href="/miami-beach-realtor/">Miami Beach</a>
+
+<a href="/key-biscayne-realtor/">Key Biscayne</a>
+
+<a href="/aventura-realtor/">Aventura</a>
+
+<a href="/sunny-isles-beach-realtor/">Sunny Isles Beach</a>
+
+<a href="/cutler-bay-realtor/">Cutler Bay</a>
+
+<a href="/kendall-realtor/">Kendall</a>
+
+<a href="/miami-lakes-realtor/">Miami Lakes</a>
+
+<a href="/homestead-realtor/">Homestead</a>
+
+<a href="/miramar-realtor/">Miramar</a>
+
+<a href="/pembroke-pines-realtor/">Pembroke Pines</a>
+
+<a href="/weston-realtor/">Weston</a>
+
+</div>
+
+</div>
 
 </section>
 
@@ -909,11 +951,11 @@ CONTACT ROBERTH
 <div>
 
 <h2>
-Ready to Achieve Your Real Estate Goals?
+Ready to Make Your Next Move?
 </h2>
 
 <p>
-Let's talk about your next move.
+Let's talk about your real estate goals.
 </p>
 
 </div>
@@ -926,7 +968,6 @@ class="btn btn-white">
 CALL (786) 210-6833
 
 </a>
-
 
 </div>
 
