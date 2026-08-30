@@ -58,6 +58,8 @@
       padding: 0 28px;
     }
 
+    /* HEADER */
+
     header {
       position: absolute;
       top: 0;
@@ -146,6 +148,8 @@
       font-weight: 700;
     }
 
+    /* HERO */
+
     .hero {
       min-height: 700px;
       display: flex;
@@ -217,6 +221,8 @@
       color: var(--navy);
     }
 
+    /* SERVICES */
+
     .services {
       padding: 50px 0;
       border-bottom: 1px solid var(--border);
@@ -258,6 +264,8 @@
       line-height: 1.6;
     }
 
+    /* GENERAL */
+
     .section {
       padding: 80px 0;
     }
@@ -280,12 +288,14 @@
       line-height: 1.7;
     }
 
+    /* AREAS */
+
     .markets {
       background: #ffffff;
     }
 
     .area-list {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: 0 auto;
       display: flex;
       justify-content: center;
@@ -294,11 +304,22 @@
       text-align: center;
     }
 
+    .area-list a,
     .area-list span {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 22px;
       white-space: nowrap;
     }
+
+    .area-list a {
+      transition: 0.2s;
+    }
+
+    .area-list a:hover {
+      color: var(--gold);
+    }
+
+    /* ABOUT */
 
     .about {
       display: grid;
@@ -363,6 +384,8 @@
       letter-spacing: 1px;
     }
 
+    /* OPPORTUNITIES */
+
     .opportunities {
       background: var(--light);
     }
@@ -411,6 +434,8 @@
       line-height: 1.6;
     }
 
+    /* SOLD */
+
     .sold-section {
       background: #ffffff;
       text-align: center;
@@ -446,6 +471,8 @@
       background: var(--gold);
       color: var(--navy);
     }
+
+    /* CONTACT */
 
     .contact {
       padding: 80px 0;
@@ -523,6 +550,8 @@
       resize: vertical;
     }
 
+    /* A2P / SMS CONSENT */
+
     .consent-group {
       grid-column: 1 / -1;
       padding: 18px;
@@ -575,6 +604,8 @@
       cursor: pointer;
     }
 
+    /* FOOTER */
+
     footer {
       padding: 35px 0;
       background: #030f1b;
@@ -619,6 +650,8 @@
     .legal-links a {
       text-decoration: underline;
     }
+
+    /* TABLET */
 
     @media (max-width: 900px) {
 
@@ -675,6 +708,8 @@
       }
     }
 
+    /* MOBILE */
+
     @media (max-width: 520px) {
 
       .container {
@@ -720,6 +755,7 @@
         text-align: center;
       }
 
+      .area-list a,
       .area-list span {
         display: block;
         padding: 7px 0;
@@ -776,6 +812,10 @@
       "Homestead",
       "South Miami",
       "Miami Shores",
+      "North Miami",
+      "North Miami Beach",
+      "Hialeah",
+      "Miami Gardens",
       "Westchester",
       "Tamiami",
       "Miami Springs",
@@ -796,6 +836,8 @@
 </head>
 
 <body>
+
+  <!-- HEADER -->
 
   <header>
     <div class="container">
@@ -864,6 +906,8 @@
   </header>
 
 
+  <!-- HERO -->
+
   <section class="hero">
 
     <div class="container">
@@ -909,6 +953,8 @@
 
   </section>
 
+
+  <!-- SERVICES -->
 
   <section class="services">
 
@@ -970,6 +1016,8 @@
   </section>
 
 
+  <!-- AREAS -->
+
   <section class="section markets" id="areas">
 
     <div class="container">
@@ -985,29 +1033,34 @@
         </h2>
 
         <p>
-          Serving clients throughout Miami-Dade and select South Florida communities.
+          Serving buyers, sellers and investors throughout Miami-Dade and select South Florida communities.
         </p>
 
       </div>
 
       <div class="area-list">
 
-        <span>Miami</span>
-        <span>Coral Gables</span>
-        <span>Coconut Grove</span>
-        <span>Pinecrest</span>
-        <span>Brickell</span>
-        <span>Miami Beach</span>
-        <span>Key Biscayne</span>
-        <span>Aventura</span>
-        <span>Sunny Isles Beach</span>
-        <span>Palmetto Bay</span>
-        <span>Doral</span>
-        <span>Cutler Bay</span>
-        <span>Kendall</span>
-        <span>Homestead</span>
+        <a href="/miami-realtor/">Miami</a>
+        <a href="/coral-gables-realtor/">Coral Gables</a>
+        <a href="/coconut-grove-realtor/">Coconut Grove</a>
+        <a href="/pinecrest-realtor/">Pinecrest</a>
+        <a href="/brickell-realtor/">Brickell</a>
+        <a href="/miami-beach-realtor/">Miami Beach</a>
+        <a href="/key-biscayne-realtor/">Key Biscayne</a>
+        <a href="/aventura-realtor/">Aventura</a>
+        <a href="/sunny-isles-beach-realtor/">Sunny Isles Beach</a>
+        <a href="/palmetto-bay-realtor/">Palmetto Bay</a>
+        <a href="/doral-realtor/">Doral</a>
+        <a href="/cutler-bay-realtor/">Cutler Bay</a>
+        <a href="/kendall-realtor/">Kendall</a>
+        <a href="/homestead-realtor/">Homestead</a>
+
         <span>South Miami</span>
         <span>Miami Shores</span>
+        <span>North Miami</span>
+        <span>North Miami Beach</span>
+        <span>Hialeah</span>
+        <span>Miami Gardens</span>
         <span>Westchester</span>
         <span>Tamiami</span>
         <span>Miami Springs</span>
@@ -1017,9 +1070,10 @@
         <span>Edgewater</span>
         <span>Downtown Miami</span>
         <span>Wynwood</span>
-        <span>Miramar</span>
-        <span>Pembroke Pines</span>
-        <span>Weston</span>
+
+        <a href="/miramar-realtor/">Miramar</a>
+        <a href="/pembroke-pines-realtor/">Pembroke Pines</a>
+        <a href="/weston-realtor/">Weston</a>
 
       </div>
 
@@ -1027,6 +1081,8 @@
 
   </section>
 
+
+  <!-- ABOUT -->
 
   <section class="about" id="about">
 
@@ -1090,6 +1146,8 @@
 
   </section>
 
+
+  <!-- BUY / SELL / INVEST -->
 
   <section class="section opportunities">
 
@@ -1198,6 +1256,8 @@
   </section>
 
 
+  <!-- SOLD -->
+
   <section class="section sold-section" id="sold">
 
     <div class="container">
@@ -1227,6 +1287,8 @@
 
   </section>
 
+
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
@@ -1337,10 +1399,11 @@
           ></textarea>
 
 
+          <!-- SEPARATE A2P / SMS / PHONE CONSENTS -->
+
           <div class="consent-group">
 
             <div class="consent-row">
-
               <input
                 type="checkbox"
                 id="termsConsent"
@@ -1355,12 +1418,10 @@
                 and
                 <a href="/sms-terms.html" target="_blank">SMS Terms & Conditions</a>.
               </label>
-
             </div>
 
 
             <div class="consent-row">
-
               <input
                 type="checkbox"
                 id="smsConsent"
@@ -1371,12 +1432,10 @@
               <label for="smsConsent">
                 By checking this box, I agree to receive marketing and promotional SMS text messages from Roberth Castro, REALTOR® with Keller Williams Capital Realty, regarding real estate products and services. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. Consent is not a condition of purchase.
               </label>
-
             </div>
 
 
             <div class="consent-row">
-
               <input
                 type="checkbox"
                 id="callConsent"
@@ -1387,7 +1446,6 @@
               <label for="callConsent">
                 By checking this box, I agree to receive marketing and promotional phone calls from Roberth Castro, REALTOR® with Keller Williams Capital Realty regarding real estate products and services. Consent is not a condition of purchase.
               </label>
-
             </div>
 
           </div>
@@ -1405,6 +1463,8 @@
 
   </section>
 
+
+  <!-- FOOTER -->
 
   <footer>
 
