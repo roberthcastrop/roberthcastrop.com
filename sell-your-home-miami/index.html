@@ -138,13 +138,58 @@ font-family:Georgia,serif;
 opacity:.35;
 }
 
-.links a{
+/* CITIES - TEXT ONLY */
+
+.city-list{
+display:flex;
+flex-wrap:wrap;
+gap:12px 32px;
+margin-top:30px;
+font-family:Georgia,serif;
+font-size:21px;
+}
+
+.city-list span{
+white-space:nowrap;
+}
+
+/* SOLD */
+
+.sold{
+text-align:center;
+padding:80px 7%;
+background:#fff;
+}
+
+.sold .eyebrow{
+color:#7b6650;
+}
+
+.sold h2{
+font-family:Georgia,serif;
+font-size:48px;
+margin:10px 0 15px;
+}
+
+.sold p{
+color:#606872;
+margin:0 auto 25px;
+max-width:620px;
+}
+
+.sold-btn{
 display:inline-block;
-margin:6px 8px 6px 0;
-padding:10px 14px;
-border:1px solid #bbb;
-color:#17202a;
+background:#17202a;
+color:#fff;
+padding:16px 28px;
 text-decoration:none;
+font-weight:bold;
+font-size:13px;
+letter-spacing:1px;
+}
+
+.sold-btn:hover{
+opacity:.88;
 }
 
 .cta{
@@ -171,11 +216,33 @@ padding:40px 7%;
 
 footer a{color:#fff}
 
-@media(max-width:850px){
-nav{display:none}
-.grid,.steps{grid-template-columns:1fr}
-.hero{min-height:75vh}
+footer .broker{
+font-weight:bold;
 }
+
+@media(max-width:850px){
+
+nav{display:none}
+
+.grid,.steps{
+grid-template-columns:1fr;
+}
+
+.hero{
+min-height:75vh;
+}
+
+.city-list{
+display:block;
+}
+
+.city-list span{
+display:block;
+margin:8px 0;
+}
+
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -186,6 +253,7 @@ nav{display:none}
   "url":"https://roberthcastrop.com/sell-your-home-miami/",
   "telephone":"+1-786-210-6833",
   "email":"rcastrop@kw.com",
+  "description":"Miami and South Florida REALTOR with Keller Williams Capital Realty.",
   "areaServed":[
     "Miami",
     "Coral Gables",
@@ -197,7 +265,13 @@ nav{display:none}
     "Doral",
     "Aventura",
     "Sunny Isles Beach",
-    "Palmetto Bay"
+    "Palmetto Bay",
+    "Cutler Bay",
+    "Kendall",
+    "Homestead",
+    "Miramar",
+    "Pembroke Pines",
+    "Weston"
   ]
 }
 </script>
@@ -207,14 +281,16 @@ nav{display:none}
 <body>
 
 <header>
+
 <strong>ROBERTH CASTRO</strong>
 
 <nav>
 <a href="/">Home</a>
-<a href="/miami-realtor/">Miami Realtor</a>
 <a href="#strategy">Selling Strategy</a>
+<a href="#sold">Sold</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 
@@ -230,7 +306,9 @@ nav{display:none}
 Selling a property is not simply about putting it online. The objective is to position it correctly, expose it to the right buyers, negotiate from a position of strength and protect your net proceeds.
 </p>
 
-<a class="btn" href="#contact">Discuss Your Property</a>
+<a class="btn" href="#contact">
+Discuss Your Property
+</a>
 
 <a class="btn alt" href="tel:+17862106833">
 Call (786) 210-6833
@@ -451,35 +529,48 @@ A seller should evaluate the complete structure of an offer.
 
 <h2>Areas where I help property owners sell</h2>
 
-<div class="links">
+<div class="city-list">
 
-<a href="/miami-realtor/">Miami</a>
-
-<a href="/coral-gables-realtor/">Coral Gables</a>
-
-<a href="/coconut-grove-realtor/">Coconut Grove</a>
-
-<a href="/pinecrest-realtor/">Pinecrest</a>
-
-<a href="/brickell-realtor/">Brickell</a>
-
-<a href="/miami-beach-realtor/">Miami Beach</a>
-
-<a href="/key-biscayne-realtor/">Key Biscayne</a>
-
-<a href="/doral-realtor/">Doral</a>
-
-<a href="/aventura-realtor/">Aventura</a>
-
-<a href="/sunny-isles-beach-realtor/">Sunny Isles Beach</a>
-
-<a href="/palmetto-bay-realtor/">Palmetto Bay</a>
-
-<a href="/cutler-bay-realtor/">Cutler Bay</a>
-
-<a href="/kendall-realtor/">Kendall</a>
+<span>Miami</span>
+<span>Coral Gables</span>
+<span>Coconut Grove</span>
+<span>Pinecrest</span>
+<span>Brickell</span>
+<span>Miami Beach</span>
+<span>Key Biscayne</span>
+<span>Doral</span>
+<span>Aventura</span>
+<span>Sunny Isles Beach</span>
+<span>Palmetto Bay</span>
+<span>Cutler Bay</span>
+<span>Kendall</span>
+<span>Homestead</span>
+<span>Miramar</span>
+<span>Pembroke Pines</span>
+<span>Weston</span>
 
 </div>
+
+</section>
+
+
+<section class="sold" id="sold">
+
+<div class="eyebrow">ROBERTH CASTRO · REAL ESTATE</div>
+
+<h2>SOLD</h2>
+
+<p>
+Explore sold properties.
+</p>
+
+<a
+class="sold-btn"
+href="https://roberthcastrop.kw.com/search/sold?viewport=25.780457589982767%2C-80.22216243353272%2C25.715363493075554%2C-80.30979556646729&price=800000%2Cnull"
+target="_blank"
+rel="noopener noreferrer">
+VIEW SOLD PROPERTIES
+</a>
 
 </section>
 
@@ -513,7 +604,15 @@ Email Roberth
 
 <h2>Roberth Castro</h2>
 
-<p>REALTOR® · Keller Williams</p>
+<p>REALTOR®</p>
+
+<p class="broker">
+Keller Williams Capital Realty
+</p>
+
+<p>
+Florida Real Estate License #3467807
+</p>
 
 <p>
 <a href="tel:+17862106833">(786) 210-6833</a>
