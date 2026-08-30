@@ -264,7 +264,7 @@
       line-height: 1.6;
     }
 
-    /* GENERAL SECTIONS */
+    /* GENERAL */
 
     .section {
       padding: 80px 0;
@@ -541,6 +541,48 @@
       resize: vertical;
     }
 
+    /* A2P / SMS CONSENT */
+
+    .consent-group {
+      grid-column: 1 / -1;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .consent-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      margin-bottom: 16px;
+    }
+
+    .consent-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-form .consent-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      margin: 2px 0 0;
+      padding: 0;
+      cursor: pointer;
+      accent-color: var(--gold);
+    }
+
+    .consent-row label {
+      color: #e4e8ec;
+      font-size: 11px;
+      line-height: 1.55;
+      cursor: pointer;
+    }
+
+    .consent-row a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
     .contact-form button {
       grid-column: 1 / -1;
       padding: 17px 25px;
@@ -590,6 +632,14 @@
 
     footer a:hover {
       color: #ffffff;
+    }
+
+    .legal-links {
+      margin-top: 8px;
+    }
+
+    .legal-links a {
+      text-decoration: underline;
     }
 
     /* TABLET */
@@ -719,7 +769,8 @@
       }
 
       .contact-form textarea,
-      .contact-form button {
+      .contact-form button,
+      .consent-group {
         grid-column: 1;
       }
     }
@@ -989,7 +1040,7 @@
   </section>
 
 
-  <!-- ABOUT / BIO -->
+  <!-- ABOUT -->
 
   <section class="about" id="about">
 
@@ -1077,7 +1128,6 @@
       </div>
 
       <div class="opportunity-grid">
-
 
         <a
           class="opportunity-card"
@@ -1306,6 +1356,59 @@
             placeholder="Message"
           ></textarea>
 
+
+          <!-- SEPARATE A2P / SMS / PHONE CONSENTS -->
+
+          <div class="consent-group">
+
+            <div class="consent-row">
+              <input
+                type="checkbox"
+                id="termsConsent"
+                name="terms_and_privacy_consent"
+                value="Yes"
+                required
+              >
+
+              <label for="termsConsent">
+                I have read and agree to the
+                <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
+                and
+                <a href="/sms-terms.html" target="_blank">SMS Terms & Conditions</a>.
+              </label>
+            </div>
+
+
+            <div class="consent-row">
+              <input
+                type="checkbox"
+                id="smsConsent"
+                name="sms_marketing_consent"
+                value="Yes"
+              >
+
+              <label for="smsConsent">
+                By checking this box, I agree to receive marketing and promotional SMS text messages from Roberth Castro, REALTOR® with Keller Williams Capital Realty, regarding real estate products and services. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. Consent is not a condition of purchase.
+              </label>
+            </div>
+
+
+            <div class="consent-row">
+              <input
+                type="checkbox"
+                id="callConsent"
+                name="phone_call_marketing_consent"
+                value="Yes"
+              >
+
+              <label for="callConsent">
+                By checking this box, I agree to receive marketing and promotional phone calls from Roberth Castro, REALTOR® with Keller Williams Capital Realty regarding real estate products and services. Consent is not a condition of purchase.
+              </label>
+            </div>
+
+          </div>
+
+
           <button type="submit">
             CONTACT ME
           </button>
@@ -1337,6 +1440,12 @@
 
         <div>
           Florida Real Estate License #3467807
+        </div>
+
+        <div class="legal-links">
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          &nbsp; · &nbsp;
+          <a href="/sms-terms.html">SMS Terms & Conditions</a>
         </div>
 
       </div>
