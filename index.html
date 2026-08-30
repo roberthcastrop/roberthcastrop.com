@@ -1,3 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roberth Castro | Miami & South Florida REALTOR®</title>
+
+<meta name="description" content="Roberth Castro is a Miami REALTOR® with Keller Williams Capital Realty helping buyers, sellers and investors throughout Miami and South Florida.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://roberthcastrop.com/">
+<link rel="icon" href="logo.png">
+
+<style>
+
+:root{
+--navy:#071b2f;
+--gold:#c7a04a;
+--text:#14202e;
+--gray:#68717c;
+--light:#f6f6f4;
+--border:#dedede;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+color:var(--text);
+background:#fff;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 28px;
+}
+
+/* HEADER */
+
+header{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:20;
+padding:22px 0;
+color:#fff;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:14px;
+color:#fff;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.brand img{
+width:55px;
+height:55px;
+object-fit:contain;
+}
+
+.brand small{
+display:block;
+font-size:10px;
+margin-top:4px;
+font-weight:normal;
+letter-spacing:2px;
+}
+
+.menu{
+display:flex;
+align-items:center;
+gap:30px;
+font-size:13px;
+font-weight:bold;
+}
+
+.menu a:hover{color:var(--gold)}
+
+.mobile-button{
+display:none;
+background:none;
+border:0;
+color:#fff;
+font-size:30px;
+cursor:pointer;
+}
+
+.mobile-menu{
+display:none;
+position:absolute;
+top:90px;
+left:20px;
+right:20px;
+background:var(--navy);
+padding:12px 20px;
+box-shadow:0 12px 35px rgba(0,0,0,.3);
+}
+
+.mobile-menu.open{display:block}
+
+.mobile-menu a{
+display:block;
+padding:15px 6px;
+border-bottom:1px solid rgba(255,255,255,.12);
+font-size:13px;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+min-height:700px;
+display:flex;
+align-items:center;
+color:#fff;
+background:
+linear-gradient(90deg,rgba(3,15,28,.86),rgba(3,15,28,.20)),
+url("luxury-home.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:780px;
+padding-top:70px;
+}
+
+.eyebrow{
+text-transform:uppercase;
+letter-spacing:3px;
+font-size:12px;
+font-weight:bold;
+color:var(--gold);
+}
+
+.hero h1{
+font-family:Georgia,serif;
+font-size:70px;
+line-height:1;
+font-weight:normal;
+margin:15px 0 18px;
+}
+
+.hero p{
+font-size:20px;
+margin:0 0 30px;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:15px 24px;
+background:var(--navy);
+color:#fff;
+font-size:12px;
+font-weight:bold;
+letter-spacing:.5px;
+transition:.25s;
+border:0;
+cursor:pointer;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+opacity:.92;
+}
+
+.btn-white{
+background:#fff;
+color:var(--navy);
+}
+
+/* SERVICES */
+
+.services{
+padding:50px 0;
+border-bottom:1px solid var(--border);
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+}
+
+.service{
+display:block;
+text-align:center;
+padding:25px 40px;
+border-right:1px solid var(--border);
+}
+
+.service:last-child{border-right:none}
+
+.service-icon{
+font-size:30px;
+margin-bottom:15px;
+color:var(--gold);
+}
+
+.service h3{
+font-size:14px;
+margin:0 0 10px;
+}
+
+.service p{
+font-size:14px;
+color:var(--gray);
+line-height:1.6;
+max-width:280px;
+margin:auto;
+}
+
+/* GENERAL */
+
+.section{padding:80px 0}
+
+.section-title{
+text-align:center;
+max-width:760px;
+margin:0 auto 45px;
+}
+
+.section-title h2{
+font-family:Georgia,serif;
+font-size:42px;
+font-weight:normal;
+margin:10px 0;
+}
+
+.section-title p{
+color:var(--gray);
+line-height:1.7;
+}
+
+/* AREAS */
+
+.markets{background:#fff}
+
+.area-list{
+max-width:1050px;
+margin:auto;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+text-align:center;
+gap:12px 30px;
+}
+
+.area-list span{
+font-family:Georgia,serif;
+font-size:22px;
+white-space:nowrap;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:46% 54%;
+min-height:650px;
+background:var(--navy);
+}
+
+.about-photo{
+background-image:url("roberth.jpg");
+background-size:cover;
+background-position:center top;
+}
+
+.about-content{
+color:#fff;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:70px 8%;
+}
+
+.about-content h2{
+font-family:Georgia,serif;
+font-size:50px;
+line-height:1.08;
+font-weight:normal;
+margin:12px 0 25px;
+}
+
+.about-content p{
+max-width:650px;
+color:#e1e7ec;
+line-height:1.75;
+font-size:15px;
+margin:0 0 16px;
+}
+
+.about-details{
+display:flex;
+gap:35px;
+flex-wrap:wrap;
+margin:20px 0 28px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.15);
+}
+
+.about-details strong{
+display:block;
+font-family:Georgia,serif;
+font-size:20px;
+font-weight:normal;
+}
+
+.about-details span{
+display:block;
+font-size:10px;
+letter-spacing:1px;
+color:var(--gold);
+margin-top:5px;
+}
+
+/* OPPORTUNITIES */
+
+.opportunities{background:var(--light)}
+
+.opportunity-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.opportunity-card{
+display:block;
+background:#fff;
+box-shadow:0 2px 12px rgba(0,0,0,.04);
+transition:.25s;
+}
+
+.opportunity-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 25px rgba(0,0,0,.10);
+}
+
+.opportunity-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.opportunity-info{padding:25px}
+
+.opportunity-info h3{
+font-family:Georgia,serif;
+font-size:25px;
+font-weight:normal;
+margin:0 0 9px;
+}
+
+.opportunity-info p{
+color:var(--gray);
+font-size:14px;
+line-height:1.6;
+margin:0;
+}
+
+/* SOLD */
+
+.sold-section{
+background:#fff;
+text-align:center;
+}
+
+.sold-section h2{
+font-family:Georgia,serif;
+font-size:46px;
+font-weight:normal;
+margin:10px 0 15px;
+}
+
+.sold-section p{
+color:var(--gray);
+font-size:15px;
+line-height:1.7;
+margin:0 auto 28px;
+max-width:600px;
+}
+
+.sold-button{
+display:inline-block;
+padding:16px 28px;
+background:var(--navy);
+color:#fff;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1px;
+transition:.25s;
+}
+
+.sold-button:hover{
+background:var(--gold);
+color:var(--navy);
+}
+
+/* CONTACT */
+
+.contact{
+background:
+linear-gradient(rgba(3,15,28,.88),rgba(3,15,28,.88)),
+url("brickell.jpg");
+background-size:cover;
+background-position:center;
+color:#fff;
+padding:80px 0;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:42% 58%;
+gap:70px;
+align-items:start;
+}
+
+.contact h2{
+font-family:Georgia,serif;
+font-size:42px;
+font-weight:normal;
+margin:10px 0 18px;
+}
+
+.contact-copy p{
+color:#e4e8ec;
+line-height:1.7;
+margin:0 0 25px;
+}
+
+.direct-contact{
+font-size:14px;
+line-height:2;
+}
+
+.contact-form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+border:1px solid rgba(255,255,255,.35);
+background:rgba(255,255,255,.08);
+color:#fff;
+padding:16px;
+font-family:Arial,Helvetica,sans-serif;
+font-size:14px;
+outline:none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+color:#d7dce1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:var(--gold);
+}
+
+.contact-form textarea{
+grid-column:1/-1;
+min-height:130px;
+resize:vertical;
+}
+
+.contact-form button{
+grid-column:1/-1;
+background:var(--gold);
+color:#071b2f;
+padding:17px 25px;
+border:0;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#030f1b;
+color:#cbd2d9;
+padding:35px 0;
+font-size:12px;
+}
+
+.footer-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.footer-name{
+color:#fff;
+font-weight:bold;
+margin-bottom:6px;
+}
+
+.broker-name{
+color:#fff;
+font-weight:bold;
+margin:6px 0;
+letter-spacing:.3px;
+}
+
+.footer-contact{text-align:right}
+
+footer a:hover{color:#fff}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.menu{display:none}
+
+.mobile-button{display:block}
+
+.hero{min-height:620px}
+
+.hero h1{font-size:50px}
+
+.services-grid,
+.opportunity-grid{
+grid-template-columns:1fr;
+}
+
+.service{
+border-right:none;
+border-bottom:1px solid var(--border);
+padding:30px;
+}
+
+.about{grid-template-columns:1fr}
+
+.about-photo{min-height:550px}
+
+.about-content{padding:60px 30px}
+
+.contact-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.footer-contact{text-align:left}
+
+}
+
+@media(max-width:520px){
+
+.container{padding:0 20px}
+
+.brand img{
+width:45px;
+height:45px;
+}
+
+.hero{min-height:590px}
+
+.hero h1{font-size:42px}
+
+.hero p{font-size:17px}
+
+.section{padding:65px 0}
+
+.section-title h2{font-size:35px}
+
+.area-list{
+display:block;
+text-align:center;
+}
+
+.area-list span{
+display:block;
+font-size:21px;
+padding:7px 0;
+}
+
+.about-photo{min-height:440px}
+
+.about-content h2{font-size:39px}
+
+.contact-form{grid-template-columns:1fr}
+
+.contact-form textarea,
+.contact-form button{
+grid-column:1;
+}
+
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"RealEstateAgent",
+"name":"Roberth Castro",
+"url":"https://roberthcastrop.com/",
+"telephone":"+17862106833",
+"email":"rcastrop@kw.com",
+"description":"Miami and South Florida REALTOR with Keller Williams Capital Realty helping buyers, sellers and real estate investors.",
+"areaServed":[
+"Miami",
+"Coral Gables",
+"Coconut Grove",
+"Pinecrest",
+"Brickell",
+"Miami Beach",
+"Key Biscayne",
+"Aventura",
+"Sunny Isles Beach",
+"Palmetto Bay",
+"Doral",
+"Cutler Bay",
+"Kendall",
+"Homestead",
+"Miramar",
+"Pembroke Pines",
+"Weston",
+"South Florida"
+]
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<a class="brand" href="./">
+
+<img src="logo.png" alt="Roberth Castro">
+
+<div>
+ROBERTH CASTRO
+<small>KELLER WILLIAMS CAPITAL REALTY</small>
+</div>
+
+</a>
+
+<div class="menu">
+
+<a href="https://roberthcastrop.kw.com/"
+target="_blank"
+rel="noopener noreferrer">
+BUY
+</a>
+
+<a href="sell-your-home-miami/">SELL</a>
+<a href="#areas">AREAS</a>
+<a href="#about">ABOUT</a>
+<a href="#sold">SOLD</a>
+<a href="#contact">CONTACT</a>
+
+</div>
+
+<button
+class="mobile-button"
+type="button"
+onclick="toggleMenu()"
+aria-label="Open menu"
+aria-expanded="false"
+id="menuButton">
+☰
+</button>
+
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a href="https://roberthcastrop.kw.com/"
+target="_blank"
+rel="noopener noreferrer">
+BUY / SEARCH PROPERTIES
+</a>
+
+<a href="sell-your-home-miami/">SELL</a>
+<a href="#areas" onclick="closeMenu()">AREAS</a>
+<a href="#about" onclick="closeMenu()">ABOUT</a>
+<a href="#sold" onclick="closeMenu()">SOLD</a>
+<a href="#contact" onclick="closeMenu()">CONTACT</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+ROBERTH CASTRO · REALTOR®
+</div>
+
+<h1>
+Miami & South Florida<br>
+Real Estate
+</h1>
+
+<p>
+Local expertise. Strategic representation. Personalized service.
+</p>
+
+<div class="buttons">
+
+<a href="https://roberthcastrop.kw.com/"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+SEARCH PROPERTIES
+</a>
+
+<a href="sell-your-home-miami/"
+class="btn btn-white">
+SELL YOUR HOME
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services">
+
+<div class="container services-grid">
+
+<a href="https://roberthcastrop.kw.com/"
+target="_blank"
+rel="noopener noreferrer"
+class="service">
+
+<div class="service-icon">⌂</div>
+<h3>BUY</h3>
+<p>Search available properties throughout Miami and South Florida.</p>
+
+</a>
+
+<a href="sell-your-home-miami/" class="service">
+
+<div class="service-icon">◇</div>
+<h3>SELL</h3>
+<p>Strategic positioning, marketing and negotiation for your property.</p>
+
+</a>
+
+<a href="https://roberthcastrop.kw.com/"
+target="_blank"
+rel="noopener noreferrer"
+class="service">
+
+<div class="service-icon">↗</div>
+<h3>INVEST</h3>
+<p>Explore South Florida real estate opportunities with a strategic approach.</p>
+
+</a>
+
+</div>
+
+</section>
+
+<section class="section markets" id="areas">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="eyebrow">
+AREAS I SERVE
+</div>
+
+<h2>
+Miami & South Florida
+</h2>
+
+<p>
+Serving clients throughout Miami-Dade and select South Florida communities.
+</p>
+
+</div>
+
+<div class="area-list">
+
+<span>Miami</span>
+<span>Coral Gables</span>
+<span>Coconut Grove</span>
+<span>Pinecrest</span>
+<span>Brickell</span>
+<span>Miami Beach</span>
+<span>Key Biscayne</span>
+<span>Aventura</span>
+<span>Sunny Isles Beach</span>
+<span>Palmetto Bay</span>
+<span>Doral</span>
+<span>Cutler Bay</span>
+<span>Kendall</span>
+<span>Homestead</span>
+<span>Miramar</span>
+<span>Pembroke Pines</span>
+<span>Weston</span>
+
+</div>
+
+</div>
+
+</section>
+
 <section class="about" id="about">
 
 <div class="about-photo"
@@ -54,3 +906,271 @@ class="btn btn-white">
 </div>
 
 </section>
+
+<section class="section opportunities">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="eyebrow">
+REAL ESTATE
+</div>
+
+<h2>
+Buy. Sell. Invest.
+</h2>
+
+<p>
+Professional representation for your next South Florida real estate move.
+</p>
+
+</div>
+
+<div class="opportunity-grid">
+
+<a class="opportunity-card"
+href="https://roberthcastrop.kw.com/"
+target="_blank"
+rel="noopener noreferrer">
+
+<img src="brickell.jpg" alt="Miami real estate">
+
+<div class="opportunity-info">
+<h3>Find a Property</h3>
+<p>Explore available homes and condominiums throughout South Florida.</p>
+</div>
+
+</a>
+
+<a class="opportunity-card"
+href="sell-your-home-miami/">
+
+<img src="luxury-home.jpg" alt="Sell a home in Miami">
+
+<div class="opportunity-info">
+<h3>Sell Your Home</h3>
+<p>Position your property with a focused marketing and negotiation strategy.</p>
+</div>
+
+</a>
+
+<a class="opportunity-card"
+href="https://roberthcastrop.kw.com/"
+target="_blank"
+rel="noopener noreferrer">
+
+<img src="aerial-home.jpg" alt="South Florida real estate investment">
+
+<div class="opportunity-info">
+<h3>Invest in South Florida</h3>
+<p>Evaluate opportunities with attention to location, value and long-term objectives.</p>
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section sold-section" id="sold">
+
+<div class="container">
+
+<div class="eyebrow">
+ROBERTH CASTRO · REAL ESTATE
+</div>
+
+<h2>
+SOLD
+</h2>
+
+<p>
+Explore sold properties.
+</p>
+
+<a
+class="sold-button"
+href="https://roberthcastrop.kw.com/search/sold?viewport=25.780457589982767%2C-80.22216243353272%2C25.715363493075554%2C-80.30979556646729&price=800000%2Cnull"
+target="_blank"
+rel="noopener noreferrer">
+VIEW SOLD PROPERTIES
+</a>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div class="contact-copy">
+
+<div class="eyebrow">
+LET'S CONNECT
+</div>
+
+<h2>
+Ready to make your next move?
+</h2>
+
+<p>
+Whether you are buying, selling or investing in South Florida real estate, send me your information and I will contact you directly.
+</p>
+
+<div class="direct-contact">
+
+<a href="tel:+17862106833">
+(786) 210-6833
+</a>
+
+<br>
+
+<a href="mailto:rcastrop@kw.com">
+rcastrop@kw.com
+</a>
+
+<br>
+
+<strong>Keller Williams Capital Realty</strong>
+
+</div>
+
+</div>
+
+<form
+class="contact-form"
+action="https://formsubmit.co/rcastrop@kw.com"
+method="POST">
+
+<input type="hidden"
+name="_subject"
+value="New website lead - roberthcastrop.com">
+
+<input type="hidden"
+name="_captcha"
+value="false">
+
+<input type="hidden"
+name="_template"
+value="table">
+
+<input type="hidden"
+name="_next"
+value="https://roberthcastrop.com/?submitted=1#contact">
+
+<input type="text"
+name="name"
+placeholder="Name"
+autocomplete="name"
+required>
+
+<input type="email"
+name="email"
+placeholder="Email"
+autocomplete="email"
+required>
+
+<input type="tel"
+name="phone"
+placeholder="Phone"
+autocomplete="tel"
+required>
+
+<input type="text"
+name="interest"
+placeholder="Buying, Selling or Investing?">
+
+<textarea
+name="message"
+placeholder="Message"></textarea>
+
+<button type="submit">
+CONTACT ME
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container footer-row">
+
+<div>
+
+<div class="footer-name">
+ROBERTH CASTRO · REALTOR®
+</div>
+
+<div class="broker-name">
+KELLER WILLIAMS CAPITAL REALTY
+</div>
+
+<div>
+Florida Real Estate License #3467807
+</div>
+
+</div>
+
+<div class="footer-contact">
+
+<a href="tel:+17862106833">
+(786) 210-6833
+</a>
+
+&nbsp; · &nbsp;
+
+<a href="mailto:rcastrop@kw.com">
+rcastrop@kw.com
+</a>
+
+<br>
+
+www.roberthcastrop.com
+
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+const menu=document.getElementById("mobileMenu");
+const button=document.getElementById("menuButton");
+
+menu.classList.toggle("open");
+
+button.setAttribute(
+"aria-expanded",
+menu.classList.contains("open") ? "true" : "false"
+);
+
+}
+
+function closeMenu(){
+
+const menu=document.getElementById("mobileMenu");
+const button=document.getElementById("menuButton");
+
+menu.classList.remove("open");
+button.setAttribute("aria-expanded","false");
+
+}
+
+</script>
+
+</body>
+</html>
