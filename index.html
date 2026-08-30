@@ -1,1578 +1,437 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Roberth Castro | Miami & South Florida REALTOR®</title>
-
-  <meta
-    name="description"
-    content="Roberth Castro is a Miami REALTOR® with Keller Williams Capital Realty helping buyers, sellers and investors throughout Miami and South Florida."
-  >
-
-  <meta name="robots" content="index, follow">
-
-  <link rel="canonical" href="https://roberthcastrop.com/">
-  <link rel="icon" href="logo.png">
-
-  <style>
-    :root {
-      --navy: #071b2f;
-      --gold: #c7a04a;
-      --text: #14202e;
-      --gray: #68717c;
-      --light: #f6f6f4;
-      --border: #dedede;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: #ffffff;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 28px;
-    }
-
-    header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      padding: 22px 0;
-      color: #ffffff;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      color: #ffffff;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .brand img {
-      width: 55px;
-      height: 55px;
-      object-fit: contain;
-    }
-
-    .brand small {
-      display: block;
-      margin-top: 4px;
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 2px;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .menu a {
-      transition: 0.2s;
-    }
-
-    .menu a:hover {
-      color: var(--gold);
-    }
-
-    .mobile-button {
-      display: none;
-      background: transparent;
-      border: 0;
-      color: #ffffff;
-      font-size: 30px;
-      cursor: pointer;
-    }
-
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 90px;
-      left: 20px;
-      right: 20px;
-      padding: 12px 20px;
-      background: var(--navy);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-    }
-
-    .mobile-menu.open {
-      display: block;
-    }
-
-    .mobile-menu a {
-      display: block;
-      padding: 15px 6px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .hero {
-      min-height: 700px;
-      display: flex;
-      align-items: center;
-      color: #ffffff;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(3, 15, 28, 0.86),
-          rgba(3, 15, 28, 0.20)
-        ),
-        url("luxury-home.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .hero-content {
-      max-width: 780px;
-      padding-top: 70px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .hero h1 {
-      margin: 15px 0 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 70px;
-      line-height: 1;
-      font-weight: 400;
-    }
-
-    .hero p {
-      margin: 0 0 30px;
-      font-size: 20px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 24px;
-      border: 0;
-      background: var(--navy);
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      transition: 0.25s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.92;
-    }
-
-    .btn-white {
-      background: #ffffff;
-      color: var(--navy);
-    }
-
-    .services {
-      padding: 50px 0;
-      border-bottom: 1px solid var(--border);
-      background: #ffffff;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .service {
-      display: block;
-      padding: 25px 40px;
-      text-align: center;
-      border-right: 1px solid var(--border);
-    }
-
-    .service:last-child {
-      border-right: none;
-    }
-
-    .service-icon {
-      margin-bottom: 15px;
-      color: var(--gold);
-      font-size: 30px;
-    }
-
-    .service h3 {
-      margin: 0 0 10px;
-      font-size: 14px;
-    }
-
-    .service p {
-      max-width: 280px;
-      margin: 0 auto;
-      color: var(--gray);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      max-width: 760px;
-      margin: 0 auto 45px;
-      text-align: center;
-    }
-
-    .section-title h2 {
-      margin: 10px 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 42px;
-      font-weight: 400;
-    }
-
-    .section-title p {
-      color: var(--gray);
-      line-height: 1.7;
-    }
-
-    .markets {
-      background: #ffffff;
-    }
-
-    .area-list {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px 30px;
-      text-align: center;
-    }
-
-    .area-list a {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
-      white-space: nowrap;
-      transition: 0.2s;
-    }
-
-    .area-list a:hover {
-      color: var(--gold);
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 46% 54%;
-      min-height: 650px;
-      background: var(--navy);
-    }
-
-    .about-photo {
-      min-height: 650px;
-      background-image: url("roberth.jpg");
-      background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
-    }
-
-    .about-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 70px 8%;
-      color: #ffffff;
-    }
-
-    .about-content h2 {
-      margin: 12px 0 25px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 50px;
-      line-height: 1.08;
-      font-weight: 400;
-    }
-
-    .about-content p {
-      max-width: 650px;
-      margin: 0 0 16px;
-      color: #e1e7ec;
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    .about-details {
-      display: flex;
-      gap: 35px;
-      flex-wrap: wrap;
-      margin: 20px 0 28px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .about-details strong {
-      display: block;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 20px;
-      font-weight: 400;
-    }
-
-    .about-details span {
-      display: block;
-      margin-top: 5px;
-      color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 1px;
-    }
-
-    .opportunities {
-      background: var(--light);
-    }
-
-    .opportunity-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .opportunity-card {
-      display: block;
-      overflow: hidden;
-      background: #ffffff;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-      transition: 0.25s;
-    }
-
-    .opportunity-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
-    }
-
-    .opportunity-card img {
-      display: block;
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-
-    .opportunity-info {
-      padding: 25px;
-    }
-
-    .opportunity-info h3 {
-      margin: 0 0 9px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-      font-weight: 400;
-    }
-
-    .opportunity-info p {
-      margin: 0;
-      color: var(--gray);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .sold-section {
-      background: #ffffff;
-      text-align: center;
-    }
-
-    .sold-section h2 {
-      margin: 10px 0 15px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 46px;
-      font-weight: 400;
-    }
-
-    .sold-section p {
-      max-width: 600px;
-      margin: 0 auto 28px;
-      color: var(--gray);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .sold-button {
-      display: inline-block;
-      padding: 16px 28px;
-      background: var(--navy);
-      color: #ffffff;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      transition: 0.25s;
-    }
-
-    .sold-button:hover {
-      background: var(--gold);
-      color: var(--navy);
-    }
-
-    .contact {
-      padding: 80px 0;
-      color: #ffffff;
-      background:
-        linear-gradient(
-          rgba(3, 15, 28, 0.88),
-          rgba(3, 15, 28, 0.88)
-        ),
-        url("brickell.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 42% 58%;
-      gap: 70px;
-      align-items: start;
-    }
-
-    .contact h2 {
-      margin: 10px 0 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 42px;
-      font-weight: 400;
-    }
-
-    .contact-copy p {
-      margin: 0 0 25px;
-      color: #e4e8ec;
-      line-height: 1.7;
-    }
-
-    .direct-contact {
-      font-size: 14px;
-      line-height: 2;
-    }
-
-    .direct-contact a:hover {
-      color: var(--gold);
-    }
-
-    .contact-form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      background: rgba(255, 255, 255, 0.08);
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
-      outline: none;
-    }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: #d7dce1;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: var(--gold);
-    }
-
-    .contact-form textarea {
-      grid-column: 1 / -1;
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .consent-group {
-      grid-column: 1 / -1;
-      padding: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .consent-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 11px;
-      margin-bottom: 16px;
-    }
-
-    .consent-row:last-child {
-      margin-bottom: 0;
-    }
-
-    .contact-form .consent-row input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      min-width: 18px;
-      margin: 2px 0 0;
-      padding: 0;
-      cursor: pointer;
-      accent-color: var(--gold);
-    }
-
-    .consent-row label {
-      color: #e4e8ec;
-      font-size: 11px;
-      line-height: 1.55;
-      cursor: pointer;
-    }
-
-    .consent-row a {
-      color: var(--gold);
-      text-decoration: underline;
-    }
-
-    .contact-form button {
-      grid-column: 1 / -1;
-      padding: 17px 25px;
-      border: 0;
-      background: var(--gold);
-      color: var(--navy);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      cursor: pointer;
-    }
-
-    footer {
-      padding: 35px 0;
-      background: #030f1b;
-      color: #cbd2d9;
-      font-size: 12px;
-    }
-
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    .footer-name {
-      margin-bottom: 6px;
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .broker-name {
-      margin: 6px 0;
-      color: #ffffff;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .footer-contact {
-      text-align: right;
-      line-height: 1.8;
-    }
-
-    footer a:hover {
-      color: #ffffff;
-    }
-
-    .legal-links {
-      margin-top: 8px;
-    }
-
-    .legal-links a {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 900px) {
-      .menu {
-        display: none;
-      }
-
-      .mobile-button {
-        display: block;
-      }
-
-      .hero {
-        min-height: 620px;
-      }
-
-      .hero h1 {
-        font-size: 50px;
-      }
-
-      .services-grid,
-      .opportunity-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        padding: 30px;
-      }
-
-      .service:last-child {
-        border-bottom: none;
-      }
-
-      .about {
-        grid-template-columns: 1fr;
-      }
-
-      .about-photo {
-        min-height: 550px;
-      }
-
-      .about-content {
-        padding: 60px 30px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .footer-contact {
-        text-align: left;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .container {
-        padding: 0 20px;
-      }
-
-      .brand img {
-        width: 45px;
-        height: 45px;
-      }
-
-      .brand {
-        font-size: 13px;
-      }
-
-      .brand small {
-        font-size: 8px;
-        letter-spacing: 1.4px;
-      }
-
-      .hero {
-        min-height: 590px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .section {
-        padding: 65px 0;
-      }
-
-      .section-title h2 {
-        font-size: 35px;
-      }
-
-      .area-list {
-        display: block;
-        text-align: center;
-      }
-
-      .area-list a {
-        display: block;
-        padding: 7px 0;
-        font-size: 21px;
-      }
-
-      .about-photo {
-        min-height: 440px;
-      }
-
-      .about-content {
-        padding: 55px 25px;
-      }
-
-      .about-content h2 {
-        font-size: 39px;
-      }
-
-      .contact-form {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-form textarea,
-      .contact-form button,
-      .consent-group {
-        grid-column: 1;
-      }
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "Roberth Castro",
-    "url": "https://roberthcastrop.com/",
-    "telephone": "+17862106833",
-    "email": "rcastrop@kw.com",
-    "description": "Miami and South Florida REALTOR with Keller Williams Capital Realty helping buyers, sellers and real estate investors.",
-    "areaServed": [
-      "Miami",
-      "Coral Gables",
-      "Coconut Grove",
-      "Pinecrest",
-      "Brickell",
-      "Miami Beach",
-      "Key Biscayne",
-      "Aventura",
-      "Sunny Isles Beach",
-      "Palmetto Bay",
-      "Doral",
-      "Cutler Bay",
-      "Kendall",
-      "Homestead",
-      "Miramar",
-      "Pembroke Pines",
-      "Weston",
-      "South Miami",
-      "Miami Shores",
-      "Westchester",
-      "Tamiami",
-      "Miami Springs",
-      "Surfside",
-      "Bal Harbour",
-      "Bay Harbor Islands",
-      "Edgewater",
-      "Downtown Miami",
-      "Wynwood",
-      "South Florida"
-    ]
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Weston Realtor | Roberth Castro | Weston Real Estate</title>
+
+<meta name="description" content="Buying or selling in Weston? Work with Roberth Castro for guidance on gated communities, luxury homes, waterfront properties and the Weston real estate market.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://roberthcastrop.com/weston-realtor/">
+
+<style>
+*{
+  box-sizing:border-box
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#17202a
+}
+
+header{
+  position:absolute;
+  width:100%;
+  z-index:2;
+  padding:24px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:22px
+}
+
+.hero{
+  min-height:78vh;
+  background:
+    linear-gradient(90deg,rgba(7,18,30,.86),rgba(7,18,30,.22)),
+    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85')
+    center/cover;
+  display:flex;
+  align-items:center;
+  padding:110px 7% 70px;
+  color:#fff
+}
+
+.hero div{
+  max-width:800px
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:13px
+}
+
+.hero h1,
+.section h2{
+  font-family:Georgia,serif
+}
+
+.hero h1{
+  font-size:clamp(42px,6vw,72px);
+  line-height:1.05;
+  margin:16px 0
+}
+
+.hero p{
+  font-size:20px;
+  line-height:1.6
+}
+
+.btn{
+  display:inline-block;
+  background:#fff;
+  color:#132235;
+  padding:15px 24px;
+  text-decoration:none;
+  margin:12px 10px 0 0;
+  font-weight:bold
+}
+
+.btn.alt{
+  background:transparent;
+  color:#fff;
+  border:1px solid #fff
+}
+
+.section{
+  padding:70px 7%;
+  max-width:1200px;
+  margin:auto
+}
+
+.section h2{
+  font-size:40px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px
+}
+
+.card{
+  border:1px solid #ddd;
+  padding:28px
+}
+
+.card h3{
+  font-family:Georgia,serif;
+  font-size:24px
+}
+
+.soft{
+  background:#f4f3ef
+}
+
+.areas{
+  line-height:2;
+  font-size:17px
+}
+
+footer{
+  background:#111b27;
+  color:#fff;
+  padding:40px 7%
+}
+
+footer a{
+  color:#fff
+}
+
+@media(max-width:800px){
+  nav{
+    display:none
   }
-  </script>
+
+  .grid{
+    grid-template-columns:1fr
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"RealEstateAgent",
+  "name":"Roberth Castro",
+  "url":"https://roberthcastrop.com/weston-realtor/",
+  "telephone":"+1-786-210-6833",
+  "email":"rcastrop@kw.com",
+  "areaServed":{
+    "@type":"City",
+    "name":"Weston",
+    "address":{
+      "@type":"PostalAddress",
+      "addressRegion":"FL",
+      "addressCountry":"US"
+    }
+  }
+}
+</script>
 
 </head>
 
 <body>
 
-  <header>
-    <div class="container">
-
-      <nav>
-
-        <a class="brand" href="/">
-          <img src="logo.png" alt="Roberth Castro logo">
-
-          <div>
-            ROBERTH CASTRO
-            <small>KELLER WILLIAMS CAPITAL REALTY</small>
-          </div>
-        </a>
+<header>
 
-        <div class="menu">
+<strong>ROBERTH CASTRO</strong>
 
-          <a
-            href="https://roberthcastrop.kw.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            BUY
-          </a>
+<nav>
+<a href="/">HOME</a>
+<a href="https://roberthcastrop.kw.com/">BUY</a>
+<a href="/sell-your-home-miami/">SELL</a>
+<a href="/#about">ABOUT</a>
+<a href="#contact">CONTACT</a>
+</nav>
 
-          <a href="sell-your-home-miami/">SELL</a>
-          <a href="#areas">AREAS</a>
-          <a href="#about">ABOUT</a>
-          <a href="#sold">SOLD</a>
-          <a href="#contact">CONTACT</a>
+</header>
 
-        </div>
 
-        <button
-          class="mobile-button"
-          id="menuButton"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-          onclick="toggleMenu()"
-        >
-          ☰
-        </button>
+<section class="hero">
 
-      </nav>
+<div>
 
-      <div class="mobile-menu" id="mobileMenu">
+<div class="eyebrow">
+Weston Real Estate
+</div>
 
-        <a
-          href="https://roberthcastrop.kw.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          BUY / SEARCH PROPERTIES
-        </a>
+<h1>
+Weston Realtor
+</h1>
 
-        <a href="sell-your-home-miami/">SELL</a>
-        <a href="#areas" onclick="closeMenu()">AREAS</a>
-        <a href="#about" onclick="closeMenu()">ABOUT</a>
-        <a href="#sold" onclick="closeMenu()">SOLD</a>
-        <a href="#contact" onclick="closeMenu()">CONTACT</a>
+<p>
+Helping buyers and sellers navigate gated communities, single-family homes,
+waterfront properties and luxury real estate throughout Weston.
+</p>
 
-      </div>
+<a class="btn" href="#contact">
+Work With Roberth
+</a>
 
-    </div>
-  </header>
+<a class="btn alt" href="https://roberthcastrop.kw.com/">
+Search Properties
+</a>
 
+</div>
 
-  <section class="hero">
+</section>
 
-    <div class="container">
 
-      <div class="hero-content">
+<section class="section">
 
-        <div class="eyebrow">
-          ROBERTH CASTRO · REALTOR®
-        </div>
+<div class="eyebrow">
+Weston Communities
+</div>
 
-        <h1>
-          Miami & South Florida<br>
-          Real Estate
-        </h1>
+<h2>
+Community selection is a major part of the purchase
+</h2>
 
-        <p>
-          Local expertise. Strategic representation. Personalized service.
-        </p>
+<p>
+Weston's residential market is heavily influenced by its individual
+communities. Buyers may encounter different gate structures, amenities,
+HOA costs, lot sizes, waterfront positions and architectural styles
+depending on where they search.
+</p>
 
-        <div class="buttons">
+<p>
+That makes choosing the community nearly as important as choosing
+the individual house.
+</p>
 
-          <a
-            href="https://roberthcastrop.kw.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn"
-          >
-            SEARCH PROPERTIES
-          </a>
+</section>
 
-          <a
-            href="sell-your-home-miami/"
-            class="btn btn-white"
-          >
-            SELL YOUR HOME
-          </a>
 
-        </div>
+<section class="section soft">
 
-      </div>
+<div class="eyebrow">
+Buying in Weston
+</div>
 
-    </div>
+<h2>
+What deserves careful comparison
+</h2>
 
-  </section>
+<div class="grid">
 
+<div class="card">
 
-  <section class="services">
+<h3>
+Community & HOA
+</h3>
 
-    <div class="container services-grid">
+<p>
+Fees, amenities, security and community standards should be evaluated
+alongside the property's purchase price.
+</p>
 
-      <a
-        href="https://roberthcastrop.kw.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="service"
-      >
+</div>
 
-        <div class="service-icon">⌂</div>
 
-        <h3>BUY</h3>
+<div class="card">
 
-        <p>
-          Search available properties throughout Miami and South Florida.
-        </p>
+<h3>
+Waterfront & Lot
+</h3>
 
-      </a>
+<p>
+Lake exposure, privacy, lot position and outdoor living space can create
+meaningful premiums.
+</p>
 
+</div>
 
-      <a
-        href="sell-your-home-miami/"
-        class="service"
-      >
 
-        <div class="service-icon">◇</div>
+<div class="card">
 
-        <h3>SELL</h3>
+<h3>
+Condition
+</h3>
 
-        <p>
-          Strategic positioning, marketing and negotiation for your property.
-        </p>
+<p>
+Renovations, roof, impact protection and major systems can substantially
+change the economics of two similarly sized homes.
+</p>
 
-      </a>
+</div>
 
+</div>
 
-      <a
-        href="https://roberthcastrop.kw.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="service"
-      >
+</section>
 
-        <div class="service-icon">↗</div>
 
-        <h3>INVEST</h3>
+<section class="section">
 
-        <p>
-          Explore South Florida real estate opportunities with a strategic approach.
-        </p>
+<div class="eyebrow">
+Luxury Homes
+</div>
 
-      </a>
+<h2>
+Comparable sales need to be selected carefully
+</h2>
 
-    </div>
+<p>
+At higher price points, differences in community, lot, waterfront exposure,
+renovation quality and home size become increasingly important.
+</p>
 
-  </section>
+<p>
+Using broad citywide averages can obscure those differences. A useful
+valuation should focus on the segment of the Weston market that actually
+competes with the property.
+</p>
 
+</section>
 
-  <section class="section markets" id="areas">
 
-    <div class="container">
+<section class="section soft">
 
-      <div class="section-title">
+<div class="eyebrow">
+Selling in Weston
+</div>
 
-        <div class="eyebrow">
-          AREAS I SERVE
-        </div>
+<h2>
+Buyers compare lifestyle as well as the house
+</h2>
 
-        <h2>
-          Miami & South Florida
-        </h2>
+<p>
+A strong listing strategy should communicate what differentiates the home
+and the community—whether that is waterfront positioning, privacy,
+renovations, outdoor space, amenities or location.
+</p>
 
-        <p>
-          Serving clients throughout Miami-Dade and select South Florida communities.
-        </p>
+<p>
+Pricing should then be supported by the most relevant recent sales
+and current competing inventory.
+</p>
 
-      </div>
+</section>
 
 
-      <div class="area-list">
+<section class="section">
 
-        <a href="/miami-realtor/">Miami</a>
+<div class="eyebrow">
+Areas Served
+</div>
 
-        <a href="/coral-gables-realtor/">
-          Coral Gables
-        </a>
+<h2>
+Serving Weston and South Florida
+</h2>
 
-        <a href="/coconut-grove-realtor/">
-          Coconut Grove
-        </a>
+<p class="areas">
+Weston · Pembroke Pines · Miramar · Miami · Doral · Coral Gables ·
+Coconut Grove · Pinecrest · Brickell · Miami Beach · Key Biscayne ·
+Aventura · Sunny Isles Beach · Palmetto Bay · Cutler Bay · Kendall ·
+Homestead · South Miami · Miami Shores · Westchester · Tamiami ·
+Miami Springs · Surfside · Bal Harbour · Bay Harbor Islands ·
+Edgewater · Downtown Miami · Wynwood
+</p>
 
-        <a href="/pinecrest-realtor/">
-          Pinecrest
-        </a>
+</section>
 
-        <a href="/brickell-realtor/">
-          Brickell
-        </a>
 
-        <a href="/miami-beach-realtor/">
-          Miami Beach
-        </a>
+<section class="section">
 
-        <a href="/key-biscayne-realtor/">
-          Key Biscayne
-        </a>
+<h2>
+Buying or selling in Weston?
+</h2>
 
-        <a href="/aventura-realtor/">
-          Aventura
-        </a>
+<p>
+I can help you compare communities, evaluate properties and develop
+a strategy based on the specific segment of the Weston market.
+</p>
 
-        <a href="/sunny-isles-beach-realtor/">
-          Sunny Isles Beach
-        </a>
+<a
+class="btn"
+style="background:#132235;color:#fff"
+href="#contact">
+Contact Roberth
+</a>
 
-        <a href="/palmetto-bay-realtor/">
-          Palmetto Bay
-        </a>
+</section>
 
-        <a href="/doral-realtor/">
-          Doral
-        </a>
 
-        <a href="/cutler-bay-realtor/">
-          Cutler Bay
-        </a>
+<footer id="contact">
 
-        <a href="/kendall-realtor/">
-          Kendall
-        </a>
+<h2>
+Weston Real Estate
+</h2>
 
-        <a href="/homestead-realtor/">
-          Homestead
-        </a>
+<p>
+Roberth Castro · REALTOR® · Keller Williams Capital Realty
+</p>
 
-        <a href="/south-miami-realtor/">
-          South Miami
-        </a>
+<p>
+Florida Real Estate License #3467807
+</p>
 
-        <a href="/miami-shores-realtor/">
-          Miami Shores
-        </a>
+<p>
+<a href="tel:+17862106833">
+(786) 210-6833
+</a>
 
-        <a href="/westchester-realtor/">
-          Westchester
-        </a>
+ ·
 
-        <a href="/tamiami-realtor/">
-          Tamiami
-        </a>
+<a href="mailto:rcastrop@kw.com">
+rcastrop@kw.com
+</a>
+</p>
 
-        <a href="/miami-springs-realtor/">
-          Miami Springs
-        </a>
+<p>
+<a href="/privacy-policy.html">
+Privacy Policy
+</a>
 
-        <a href="/surfside-realtor/">
-          Surfside
-        </a>
+ ·
 
-        <a href="/bal-harbour-realtor/">
-          Bal Harbour
-        </a>
+<a href="/sms-terms.html">
+SMS Terms
+</a>
+</p>
 
-        <a href="/bay-harbor-islands-realtor/">
-          Bay Harbor Islands
-        </a>
-
-        <a href="/edgewater-realtor/">
-          Edgewater
-        </a>
-
-        <a href="/downtown-miami-realtor/">
-          Downtown Miami
-        </a>
-
-        <a href="/wynwood-realtor/">
-          Wynwood
-        </a>
-
-        <a href="/miramar-realtor/">
-          Miramar
-        </a>
-
-        <a href="/pembroke-pines-realtor/">
-          Pembroke Pines
-        </a>
-
-        <a href="/weston-realtor/">
-          Weston
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="about" id="about">
-
-    <div
-      class="about-photo"
-      role="img"
-      aria-label="Roberth Castro REALTOR"
-    ></div>
-
-    <div class="about-content">
-
-      <div class="eyebrow">
-        MIAMI REALTOR®
-      </div>
-
-      <h2>
-        Real estate representation built around your goals.
-      </h2>
-
-      <p>
-        I'm Roberth Castro, a Miami REALTOR® with Keller Williams Capital Realty, helping buyers, sellers and investors navigate the South Florida real estate market.
-      </p>
-
-      <p>
-        With six years of experience in real estate, I bring a strategic and personalized approach to every transaction—from pricing and marketing a property to negotiating and guiding my clients through closing.
-      </p>
-
-      <p>
-        My focus is simple: understand your goals, protect your interests and help you make the right real estate move.
-      </p>
-
-      <div class="about-details">
-
-        <div>
-          <strong>Miami</strong>
-          <span>LOCAL MARKET</span>
-        </div>
-
-        <div>
-          <strong>South Florida</strong>
-          <span>REAL ESTATE</span>
-        </div>
-
-        <div>
-          <strong>#3467807</strong>
-          <span>FLORIDA LICENSE</span>
-        </div>
-
-      </div>
-
-      <div>
-
-        <a
-          href="tel:+17862106833"
-          class="btn btn-white"
-        >
-          (786) 210-6833
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="section opportunities">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <div class="eyebrow">
-          REAL ESTATE
-        </div>
-
-        <h2>
-          Buy. Sell. Invest.
-        </h2>
-
-        <p>
-          Professional representation for your next South Florida real estate move.
-        </p>
-
-      </div>
-
-
-      <div class="opportunity-grid">
-
-        <a
-          class="opportunity-card"
-          href="https://roberthcastrop.kw.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          <img
-            src="brickell.jpg"
-            alt="Miami real estate"
-          >
-
-          <div class="opportunity-info">
-
-            <h3>
-              Find a Property
-            </h3>
-
-            <p>
-              Explore available homes and condominiums throughout South Florida.
-            </p>
-
-          </div>
-
-        </a>
-
-
-        <a
-          class="opportunity-card"
-          href="sell-your-home-miami/"
-        >
-
-          <img
-            src="luxury-home.jpg"
-            alt="Sell a home in Miami"
-          >
-
-          <div class="opportunity-info">
-
-            <h3>
-              Sell Your Home
-            </h3>
-
-            <p>
-              Position your property with a focused marketing and negotiation strategy.
-            </p>
-
-          </div>
-
-        </a>
-
-
-        <a
-          class="opportunity-card"
-          href="https://roberthcastrop.kw.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          <img
-            src="aerial-home.jpg"
-            alt="South Florida real estate investment"
-          >
-
-          <div class="opportunity-info">
-
-            <h3>
-              Invest in South Florida
-            </h3>
-
-            <p>
-              Evaluate opportunities with attention to location, value and long-term objectives.
-            </p>
-
-          </div>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="section sold-section" id="sold">
-
-    <div class="container">
-
-      <div class="eyebrow">
-        ROBERTH CASTRO · REAL ESTATE
-      </div>
-
-      <h2>
-        SOLD
-      </h2>
-
-      <p>
-        Explore sold properties.
-      </p>
-
-      <a
-        class="sold-button"
-        href="https://roberthcastrop.kw.com/search/sold?viewport=25.780457589982767%2C-80.22216243353272%2C25.715363493075554%2C-80.30979556646729&price=800000%2Cnull"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        VIEW SOLD PROPERTIES
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <section class="contact" id="contact">
-
-    <div class="container">
-
-      <div class="contact-grid">
-
-        <div class="contact-copy">
-
-          <div class="eyebrow">
-            LET'S CONNECT
-          </div>
-
-          <h2>
-            Ready to make your next move?
-          </h2>
-
-          <p>
-            Whether you are buying, selling or investing in South Florida real estate, send me your information and I will contact you directly.
-          </p>
-
-          <div class="direct-contact">
-
-            <a href="tel:+17862106833">
-              (786) 210-6833
-            </a>
-
-            <br>
-
-            <a href="mailto:rcastrop@kw.com">
-              rcastrop@kw.com
-            </a>
-
-            <br>
-
-            <strong>
-              Keller Williams Capital Realty
-            </strong>
-
-          </div>
-
-        </div>
-
-
-        <form
-          class="contact-form"
-          action="https://formsubmit.co/rcastrop@kw.com"
-          method="POST"
-        >
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="New website lead - roberthcastrop.com"
-          >
-
-          <input
-            type="hidden"
-            name="_captcha"
-            value="false"
-          >
-
-          <input
-            type="hidden"
-            name="_template"
-            value="table"
-          >
-
-          <input
-            type="hidden"
-            name="_next"
-            value="https://roberthcastrop.com/?submitted=1#contact"
-          >
-
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            autocomplete="name"
-            required
-          >
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            autocomplete="email"
-            required
-          >
-
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone"
-            autocomplete="tel"
-            required
-          >
-
-          <input
-            type="text"
-            name="interest"
-            placeholder="Buying, Selling or Investing?"
-          >
-
-          <textarea
-            name="message"
-            placeholder="Message"
-          ></textarea>
-
-
-          <div class="consent-group">
-
-            <div class="consent-row">
-
-              <input
-                type="checkbox"
-                id="termsConsent"
-                name="terms_and_privacy_consent"
-                value="Yes"
-                required
-              >
-
-              <label for="termsConsent">
-                I have read and agree to the
-                <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
-                and
-                <a href="/sms-terms.html" target="_blank">SMS Terms & Conditions</a>.
-              </label>
-
-            </div>
-
-
-            <div class="consent-row">
-
-              <input
-                type="checkbox"
-                id="smsConsent"
-                name="sms_marketing_consent"
-                value="Yes"
-              >
-
-              <label for="smsConsent">
-                By checking this box, I agree to receive marketing and promotional SMS text messages from Roberth Castro, REALTOR® with Keller Williams Capital Realty, regarding real estate products and services. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. Consent is not a condition of purchase.
-              </label>
-
-            </div>
-
-
-            <div class="consent-row">
-
-              <input
-                type="checkbox"
-                id="callConsent"
-                name="phone_call_marketing_consent"
-                value="Yes"
-              >
-
-              <label for="callConsent">
-                By checking this box, I agree to receive marketing and promotional phone calls from Roberth Castro, REALTOR® with Keller Williams Capital Realty regarding real estate products and services. Consent is not a condition of purchase.
-              </label>
-
-            </div>
-
-          </div>
-
-
-          <button type="submit">
-            CONTACT ME
-          </button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <footer>
-
-    <div class="container footer-row">
-
-      <div>
-
-        <div class="footer-name">
-          ROBERTH CASTRO · REALTOR®
-        </div>
-
-        <div class="broker-name">
-          KELLER WILLIAMS CAPITAL REALTY
-        </div>
-
-        <div>
-          Florida Real Estate License #3467807
-        </div>
-
-        <div class="legal-links">
-
-          <a href="/privacy-policy.html">
-            Privacy Policy
-          </a>
-
-          &nbsp; · &nbsp;
-
-          <a href="/sms-terms.html">
-            SMS Terms & Conditions
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="footer-contact">
-
-        <a href="tel:+17862106833">
-          (786) 210-6833
-        </a>
-
-        &nbsp; · &nbsp;
-
-        <a href="mailto:rcastrop@kw.com">
-          rcastrop@kw.com
-        </a>
-
-        <br>
-
-        roberthcastrop.com
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("mobileMenu");
-      const button = document.getElementById("menuButton");
-
-      menu.classList.toggle("open");
-
-      button.setAttribute(
-        "aria-expanded",
-        menu.classList.contains("open") ? "true" : "false"
-      );
-    }
-
-    function closeMenu() {
-      const menu = document.getElementById("mobileMenu");
-      const button = document.getElementById("menuButton");
-
-      menu.classList.remove("open");
-      button.setAttribute("aria-expanded", "false");
-    }
-  </script>
+</footer>
 
 </body>
 </html>
