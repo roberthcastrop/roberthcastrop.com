@@ -18,9 +18,7 @@
 
 :root{
 --navy:#071b2f;
---navy2:#0b2742;
 --gold:#c7a04a;
---white:#ffffff;
 --text:#14202e;
 --gray:#68717c;
 --light:#f6f6f4;
@@ -97,8 +95,6 @@ gap:30px;
 font-size:13px;
 font-weight:bold;
 }
-
-.menu a{transition:.2s}
 
 .menu a:hover{color:var(--gold)}
 
@@ -263,34 +259,30 @@ color:var(--gray);
 line-height:1.7;
 }
 
-/* AREAS */
+/* AREAS - TEXT ONLY */
 
 .markets{
 background:#fff;
 }
 
 .area-list{
-max-width:1000px;
+max-width:1050px;
 margin:auto;
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:0;
+text-align:center;
 }
 
-.area-list a{
+.area-list span{
 font-family:Georgia,serif;
 font-size:22px;
 padding:13px 21px;
-transition:.2s;
 white-space:nowrap;
 }
 
-.area-list a:hover{
-color:var(--gold);
-}
-
-.area-list a:not(:last-child)::after{
+.area-list span:not(:last-child)::after{
 content:"·";
 color:#c6c6c6;
 margin-left:40px;
@@ -389,7 +381,9 @@ height:260px;
 object-fit:cover;
 }
 
-.opportunity-info{padding:25px}
+.opportunity-info{
+padding:25px;
+}
 
 .opportunity-info h3{
 font-family:Georgia,serif;
@@ -405,22 +399,7 @@ line-height:1.6;
 margin:0;
 }
 
-/* SOLD */
-
-.sold{
-background:#fff;
-}
-
-.sold-note{
-max-width:760px;
-margin:0 auto;
-text-align:center;
-font-size:14px;
-line-height:1.7;
-color:var(--gray);
-}
-
-/* CONTACT FORM */
+/* CONTACT */
 
 .contact{
 background:
@@ -455,10 +434,6 @@ margin:0 0 25px;
 .direct-contact{
 font-size:14px;
 line-height:2;
-}
-
-.direct-contact a{
-color:#fff;
 }
 
 .contact-form{
@@ -505,10 +480,6 @@ font-size:12px;
 font-weight:bold;
 letter-spacing:1px;
 cursor:pointer;
-}
-
-.contact-form button:hover{
-opacity:.92;
 }
 
 /* FOOTER */
@@ -602,13 +573,13 @@ display:block;
 text-align:center;
 }
 
-.area-list a{
+.area-list span{
 display:block;
 font-size:21px;
 padding:10px;
 }
 
-.area-list a:not(:last-child)::after{
+.area-list span:not(:last-child)::after{
 content:"";
 margin:0;
 }
@@ -751,8 +722,6 @@ CONTACT
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="container">
@@ -774,16 +743,14 @@ Local expertise. Strategic representation. Personalized service.
 
 <div class="buttons">
 
-<a
-href="https://roberthcastrop.kw.com/"
+<a href="https://roberthcastrop.kw.com/"
 target="_blank"
 rel="noopener noreferrer"
 class="btn">
 SEARCH PROPERTIES
 </a>
 
-<a
-href="sell-your-home-miami/"
+<a href="sell-your-home-miami/"
 class="btn btn-white">
 SELL YOUR HOME
 </a>
@@ -796,20 +763,16 @@ SELL YOUR HOME
 
 </section>
 
-<!-- SERVICES -->
-
 <section class="services">
 
 <div class="container services-grid">
 
-<a
-href="https://roberthcastrop.kw.com/"
+<a href="https://roberthcastrop.kw.com/"
 target="_blank"
 rel="noopener noreferrer"
 class="service">
 
 <div class="service-icon">⌂</div>
-
 <h3>BUY</h3>
 
 <p>
@@ -818,12 +781,9 @@ Search available properties throughout Miami and South Florida.
 
 </a>
 
-<a
-href="sell-your-home-miami/"
-class="service">
+<a href="sell-your-home-miami/" class="service">
 
 <div class="service-icon">◇</div>
-
 <h3>SELL</h3>
 
 <p>
@@ -832,14 +792,12 @@ Strategic positioning, marketing and negotiation for your property.
 
 </a>
 
-<a
-href="https://roberthcastrop.kw.com/"
+<a href="https://roberthcastrop.kw.com/"
 target="_blank"
 rel="noopener noreferrer"
 class="service">
 
 <div class="service-icon">↗</div>
-
 <h3>INVEST</h3>
 
 <p>
@@ -869,30 +827,30 @@ Miami & South Florida
 </h2>
 
 <p>
-Explore real estate throughout Miami-Dade and select South Florida communities.
+Serving clients throughout Miami-Dade and select South Florida communities.
 </p>
 
 </div>
 
 <div class="area-list">
 
-<a href="miami-realtor/">Miami</a>
-<a href="coral-gables-realtor/">Coral Gables</a>
-<a href="coconut-grove-realtor/">Coconut Grove</a>
-<a href="pinecrest-realtor/">Pinecrest</a>
-<a href="brickell-realtor/">Brickell</a>
-<a href="miami-beach-realtor/">Miami Beach</a>
-<a href="key-biscayne-realtor/">Key Biscayne</a>
-<a href="aventura-realtor/">Aventura</a>
-<a href="sunny-isles-beach-realtor/">Sunny Isles Beach</a>
-<a href="palmetto-bay-realtor/">Palmetto Bay</a>
-<a href="doral-realtor/">Doral</a>
-<a href="cutler-bay-realtor/">Cutler Bay</a>
-<a href="kendall-realtor/">Kendall</a>
-<a href="homestead-realtor/">Homestead</a>
-<a href="miramar-realtor/">Miramar</a>
-<a href="pembroke-pines-realtor/">Pembroke Pines</a>
-<a href="weston-realtor/">Weston</a>
+<span>Miami</span>
+<span>Coral Gables</span>
+<span>Coconut Grove</span>
+<span>Pinecrest</span>
+<span>Brickell</span>
+<span>Miami Beach</span>
+<span>Key Biscayne</span>
+<span>Aventura</span>
+<span>Sunny Isles Beach</span>
+<span>Palmetto Bay</span>
+<span>Doral</span>
+<span>Cutler Bay</span>
+<span>Kendall</span>
+<span>Homestead</span>
+<span>Miramar</span>
+<span>Pembroke Pines</span>
+<span>Weston</span>
 
 </div>
 
@@ -904,8 +862,7 @@ Explore real estate throughout Miami-Dade and select South Florida communities.
 
 <section class="about" id="about">
 
-<div
-class="about-photo"
+<div class="about-photo"
 role="img"
 aria-label="Roberth Castro REALTOR">
 </div>
@@ -947,8 +904,7 @@ My approach combines local market knowledge, strategic marketing, negotiation an
 
 </div>
 
-<a
-href="tel:+17862106833"
+<a href="tel:+17862106833"
 class="btn btn-white">
 (786) 210-6833
 </a>
@@ -957,7 +913,7 @@ class="btn btn-white">
 
 </section>
 
-<!-- OPPORTUNITIES -->
+<!-- BUY / SELL / INVEST -->
 
 <section class="section opportunities">
 
@@ -981,8 +937,7 @@ Professional representation for your next South Florida real estate move.
 
 <div class="opportunity-grid">
 
-<a
-class="opportunity-card"
+<a class="opportunity-card"
 href="https://roberthcastrop.kw.com/"
 target="_blank"
 rel="noopener noreferrer">
@@ -996,8 +951,7 @@ rel="noopener noreferrer">
 
 </a>
 
-<a
-class="opportunity-card"
+<a class="opportunity-card"
 href="sell-your-home-miami/">
 
 <img src="luxury-home.jpg" alt="Sell a home in Miami">
@@ -1009,8 +963,7 @@ href="sell-your-home-miami/">
 
 </a>
 
-<a
-class="opportunity-card"
+<a class="opportunity-card"
 href="https://roberthcastrop.kw.com/"
 target="_blank"
 rel="noopener noreferrer">
@@ -1025,36 +978,6 @@ rel="noopener noreferrer">
 </a>
 
 </div>
-
-</div>
-
-</section>
-
-<!-- SOLD PROPERTIES -->
-
-<section class="section sold">
-
-<div class="container">
-
-<div class="section-title">
-
-<div class="eyebrow">
-SELECT SALES
-</div>
-
-<h2>
-Sold Properties
-</h2>
-
-<p>
-Selected closed transactions of $800,000 and above.
-</p>
-
-</div>
-
-<p class="sold-note">
-Verified sold properties will be featured here with the actual property address and closing price.
-</p>
 
 </div>
 
@@ -1164,8 +1087,6 @@ CONTACT ME
 </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
