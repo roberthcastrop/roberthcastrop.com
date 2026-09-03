@@ -236,12 +236,6 @@
       margin-top: 0;
     }
 
-    .article h3 {
-      margin: 30px 0 10px;
-      color: var(--navy);
-      font-size: 19px;
-    }
-
     .article p {
       margin: 0 0 20px;
       color: #3f4954;
@@ -268,14 +262,14 @@
       color: var(--navy);
     }
 
-    /* NUMBERED STEPS */
+    /* STEPS */
 
     .step {
       padding: 32px 0;
       border-top: 1px solid var(--border);
     }
 
-    .step:last-child {
+    .step:last-of-type {
       border-bottom: 1px solid var(--border);
     }
 
@@ -303,6 +297,10 @@
       padding: 30px;
       border: 1px solid var(--border);
       background: var(--light);
+    }
+
+    .sidebar-box + .sidebar-box {
+      margin-top: 15px;
     }
 
     .sidebar-box h3 {
@@ -345,14 +343,12 @@
     }
 
     .sidebar-contact {
-      margin-top: 12px;
       background: var(--navy);
       color: var(--white);
       border-color: var(--navy);
     }
 
-    .sidebar-contact h3,
-    .sidebar-contact p {
+    .sidebar-contact h3 {
       color: var(--white);
     }
 
@@ -360,14 +356,14 @@
       color: #d9dfe5;
     }
 
-    .sidebar-contact a:not(.btn) {
+    .sidebar-contact a {
       display: block;
       margin-top: 9px;
       color: var(--white);
       font-size: 14px;
     }
 
-    /* SELLING COSTS */
+    /* INFO */
 
     .info-box {
       margin: 45px 0;
@@ -519,10 +515,9 @@
       text-decoration: underline;
     }
 
-    /* RESPONSIVE */
+    /* MOBILE */
 
     @media (max-width: 900px) {
-
       .menu {
         display: none;
       }
@@ -550,7 +545,6 @@
     }
 
     @media (max-width: 520px) {
-
       .container {
         padding: 0 20px;
       }
@@ -648,14 +642,17 @@
         "@type": "Article",
         "@id": "https://roberthcastrop.com/how-to-sell-a-house-in-miami/#article",
         "headline": "How to Sell a House in Miami: A Complete Seller's Guide",
-        "description": "A guide to selling a house in Miami, including pricing, preparation, marketing, offers, inspections and closing.",
+        "description": "A practical guide to selling a house in Miami, including pricing, preparation, marketing, offers, inspections and closing.",
         "author": {
           "@id": "https://roberthcastrop.com/#agent"
         },
         "publisher": {
           "@id": "https://roberthcastrop.com/#agent"
         },
-        "mainEntityOfPage": "https://roberthcastrop.com/how-to-sell-a-house-in-miami/"
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://roberthcastrop.com/how-to-sell-a-house-in-miami/"
+        }
       },
       {
         "@type": "FAQPage",
@@ -681,7 +678,7 @@
             "name": "How long does it take to sell a house in Miami?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The timeline varies based on pricing, location, condition, demand, financing and the terms of the transaction. Proper positioning can improve the probability of attracting qualified buyers."
+              "text": "The timeline varies based on pricing, location, condition, demand, financing and the terms of the transaction."
             }
           },
           {
@@ -702,526 +699,601 @@
 
 <body>
 
-  <header>
+<header>
 
-    <div class="container">
+  <div class="container">
 
-      <nav>
+    <nav>
 
-        <a class="brand" href="../">
+      <a class="brand" href="../">
 
-          <img src="../logo.png" alt="Roberth Castro logo">
+        <img src="../logo.png" alt="Roberth Castro logo">
 
-          <div>
-            ROBERTH CASTRO
-            <small>KELLER WILLIAMS CAPITAL REALTY</small>
-          </div>
-
-        </a>
-
-        <div class="menu">
-
-          <a href="../search-properties/">BUY</a>
-          <a href="../sell-your-home-miami/">SELL</a>
-          <a href="../#areas">AREAS</a>
-          <a href="../#about">ABOUT</a>
-          <a href="../#sold">SOLD</a>
-          <a href="../#contact">CONTACT</a>
-
+        <div>
+          ROBERTH CASTRO
+          <small>KELLER WILLIAMS CAPITAL REALTY</small>
         </div>
 
-        <button
-          class="mobile-button"
-          id="menuButton"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          ☰
-        </button>
+      </a>
 
-      </nav>
-
-      <div class="mobile-menu" id="mobileMenu">
-
-        <a href="../search-properties/">BUY / SEARCH PROPERTIES</a>
+      <div class="menu">
+        <a href="../search-properties/">BUY</a>
         <a href="../sell-your-home-miami/">SELL</a>
         <a href="../#areas">AREAS</a>
         <a href="../#about">ABOUT</a>
         <a href="../#sold">SOLD</a>
         <a href="../#contact">CONTACT</a>
-
       </div>
+
+      <button
+        class="mobile-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../search-properties/">BUY / SEARCH PROPERTIES</a>
+      <a href="../sell-your-home-miami/">SELL</a>
+      <a href="../#areas">AREAS</a>
+      <a href="../#about">ABOUT</a>
+      <a href="../#sold">SOLD</a>
+      <a href="../#contact">CONTACT</a>
+    </div>
+
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        MIAMI HOME SELLER GUIDE
+      </div>
+
+      <h1>
+        How to Sell a House in Miami
+      </h1>
+
+      <p>
+        A practical guide to preparing, pricing, marketing and selling your
+        Miami property while navigating the transaction from listing to closing.
+      </p>
 
     </div>
 
-  </header>
+  </div>
+
+</section>
 
 
-  <section class="hero">
+<main class="article-section">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="hero-content">
+    <div class="article-layout">
 
-        <div class="eyebrow">
-          MIAMI HOME SELLER GUIDE
-        </div>
+      <article class="article">
 
-        <h1>
-          How to Sell a House in Miami
-        </h1>
-
-        <p>
-          A practical guide to preparing, pricing, marketing and selling
-          your Miami property while navigating the transaction from
-          listing to closing.
+        <p class="article-intro">
+          Selling a home in Miami involves much more than placing the property
+          on the market. Pricing, presentation, marketing, buyer qualification,
+          negotiations, inspections, financing and closing can all affect the
+          final outcome. A clear strategy from the beginning can help you
+          position your property effectively and make better decisions
+          throughout the sale.
         </p>
 
-      </div>
 
-    </div>
+        <div class="step">
 
-  </section>
+          <div class="step-number">STEP 01</div>
 
-
-  <main class="article-section">
-
-    <div class="container">
-
-      <div class="article-layout">
-
-        <article class="article">
-
-          <p class="article-intro">
-            Selling a home in Miami involves much more than placing the property
-            on the market. Pricing, presentation, marketing, buyer qualification,
-            negotiations, inspections, financing and closing can all affect the
-            final outcome. A clear strategy from the beginning can help you
-            position your property effectively and make better decisions
-            throughout the sale.
-          </p>
-
-
-          <div class="step">
-
-            <div class="step-number">
-              STEP 01
-            </div>
-
-            <h2>
-              Understand Your Miami Real Estate Market
-            </h2>
-
-            <p>
-              Miami is not one single real estate market. Buyer demand, property
-              values and competition can vary significantly between neighborhoods
-              and even between nearby properties.
-            </p>
-
-            <p>
-              A home in Coral Gables may compete with a very different group of
-              properties than a home in Doral, Pinecrest, Kendall or Miami Beach.
-              Before establishing an asking price, it is important to understand
-              what buyers are currently seeing in your specific area.
-            </p>
-
-          </div>
-
-
-          <div class="step">
-
-            <div class="step-number">
-              STEP 02
-            </div>
-
-            <h2>
-              Determine the Right Asking Price
-            </h2>
-
-            <p>
-              Pricing is one of the most important decisions a seller makes.
-              The goal is not simply to choose the highest possible number.
-              The goal is to position the property so qualified buyers see
-              enough value to schedule a showing and potentially submit an offer.
-            </p>
-
-            <p>
-              A pricing analysis should consider factors such as:
-            </p>
-
-            <ul>
-              <li>Recent comparable sales</li>
-              <li>Current competing listings</li>
-              <li>Property size and lot size</li>
-              <li>Condition and renovations</li>
-              <li>Location and neighborhood</li>
-              <li>Days on market of comparable properties</li>
-              <li>Current buyer demand</li>
-            </ul>
-
-            <p>
-              Pricing too high can reduce early buyer interest, while pricing
-              strategically can help the property compete more effectively.
-            </p>
-
-          </div>
-
-
-          <div class="step">
-
-            <div class="step-number">
-              STEP 03
-            </div>
-
-            <h2>
-              Prepare the Property for Buyers
-            </h2>
-
-            <p>
-              Buyers often form an opinion within the first few minutes of
-              seeing a property. Presentation therefore matters both online
-              and during an in-person showing.
-            </p>
-
-            <p>
-              Preparation does not necessarily mean completing a major
-              renovation. Depending on the property, simple improvements can
-              make a meaningful difference.
-            </p>
-
-            <ul>
-              <li>Deep cleaning</li>
-              <li>Removing unnecessary clutter</li>
-              <li>Improving exterior presentation</li>
-              <li>Completing obvious minor repairs</li>
-              <li>Improving lighting</li>
-              <li>Organizing rooms to improve visual space</li>
-            </ul>
-
-          </div>
-
-
-          <div class="step">
-
-            <div class="step-number">
-              STEP 04
-            </div>
-
-            <h2>
-              Market the Home Professionally
-            </h2>
-
-            <p>
-              Strong real estate marketing is designed to put the property in
-              front of qualified buyers and the agents who represent them.
-              Professional presentation is especially important because many
-              buyers begin their search online.
-            </p>
-
-            <p>
-              Depending on the property and marketing strategy, exposure may
-              include professional photography, online real estate platforms,
-              agent networks, social media, direct outreach, buyer databases
-              and open houses.
-            </p>
-
-            <p>
-              The objective is not simply to generate views. It is to generate
-              meaningful interest from buyers who may actually be in a position
-              to purchase the property.
-            </p>
-
-          </div>
-
-
-          <div class="step">
-
-            <div class="step-number">
-              STEP 05
-            </div>
-
-            <h2>
-              Evaluate Offers Beyond the Purchase Price
-            </h2>
-
-            <p>
-              The highest offer is not automatically the strongest offer.
-              Sellers should evaluate the entire proposal before deciding
-              how to respond.
-            </p>
-
-            <p>
-              Important considerations may include:
-            </p>
-
-            <ul>
-              <li>Purchase price</li>
-              <li>Financing terms</li>
-              <li>Proof of funds or loan pre-approval</li>
-              <li>Deposit amount</li>
-              <li>Inspection terms</li>
-              <li>Appraisal considerations</li>
-              <li>Requested credits or concessions</li>
-              <li>Closing date</li>
-              <li>Other contingencies</li>
-            </ul>
-
-            <p>
-              Understanding the complete structure of an offer helps a seller
-              compare both the financial value and the probability of the
-              transaction successfully reaching closing.
-            </p>
-
-          </div>
-
-
-          <div class="step">
-
-            <div class="step-number">
-              STEP 06
-            </div>
-
-            <h2>
-              Navigate Inspections, Appraisal and Financing
-            </h2>
-
-            <p>
-              An accepted contract is an important milestone, but several
-              steps may remain before closing.
-            </p>
-
-            <p>
-              Depending on the contract and how the buyer is purchasing the
-              property, the transaction may involve inspections, an appraisal,
-              lender approval, title work and other contractual requirements.
-            </p>
-
-            <p>
-              Keeping track of deadlines and responding quickly when an issue
-              arises can be important to maintaining the transaction.
-            </p>
-
-          </div>
-
-
-          <div class="step">
-
-            <div class="step-number">
-              STEP 07
-            </div>
-
-            <h2>
-              Prepare for Closing
-            </h2>
-
-            <p>
-              As the transaction approaches closing, the parties work toward
-              satisfying the remaining contractual and title requirements.
-              Closing documents are prepared, final figures are reviewed and
-              the transaction is completed according to the contract.
-            </p>
-
-            <p>
-              Sellers should understand their estimated proceeds before
-              closing so they have a clear picture of the financial result
-              of the transaction.
-            </p>
-
-          </div>
-
-
-          <h2>
-            What Does It Cost to Sell a House in Miami?
-          </h2>
+          <h2>Understand Your Miami Real Estate Market</h2>
 
           <p>
-            The cost of selling a property depends on the specific transaction.
-            Potential seller expenses can include brokerage compensation,
-            closing-related charges, taxes, title-related expenses, agreed
-            repairs, credits or other negotiated costs.
-          </p>
-
-          <div class="info-box">
-
-            <h3>
-              Know Your Estimated Net Proceeds
-            </h3>
-
-            <p>
-              Before accepting an offer, it is useful to evaluate the estimated
-              amount you may receive after mortgages, liens and applicable
-              transaction expenses are accounted for.
-            </p>
-
-          </div>
-
-
-          <h2>
-            Should You Sell Before Buying Your Next Home?
-          </h2>
-
-          <p>
-            This depends on your finances, timing and individual goals.
-            Some homeowners need proceeds from their current property before
-            purchasing another home. Others may have the ability to purchase
-            first and sell afterward.
+            Miami is not one single real estate market. Buyer demand, property
+            values and competition can vary significantly between neighborhoods
+            and even between nearby properties.
           </p>
 
           <p>
-            When both transactions are connected, planning the timeline early
-            can reduce unnecessary pressure and help coordinate the transition
-            between properties.
+            A home in Coral Gables may compete with a very different group of
+            properties than a home in Doral, Pinecrest, Kendall or Miami Beach.
+            Before establishing an asking price, it is important to understand
+            what buyers are currently seeing in your specific area.
           </p>
 
+        </div>
 
-          <h2>
-            Selling a Home in Different Miami Neighborhoods
-          </h2>
+
+        <div class="step">
+
+          <div class="step-number">STEP 02</div>
+
+          <h2>Determine the Right Asking Price</h2>
 
           <p>
-            The strategy used to sell a property should reflect the specific
-            neighborhood and the buyers most likely to consider that property.
-            If you are selling in one of the areas below, you can also explore
-            my local real estate pages:
+            Pricing is one of the most important decisions a seller makes.
+            The goal is not simply to choose the highest possible number.
+            The goal is to position the property so qualified buyers see
+            enough value to schedule a showing and potentially submit an offer.
+          </p>
+
+          <p>A pricing analysis should consider:</p>
+
+          <ul>
+            <li>Recent comparable sales</li>
+            <li>Current competing listings</li>
+            <li>Property size and lot size</li>
+            <li>Condition and renovations</li>
+            <li>Location and neighborhood</li>
+            <li>Days on market of comparable properties</li>
+            <li>Current buyer demand</li>
+          </ul>
+
+          <p>
+            Pricing too high can reduce early buyer interest, while pricing
+            strategically can help the property compete more effectively.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">STEP 03</div>
+
+          <h2>Prepare the Property for Buyers</h2>
+
+          <p>
+            Buyers often form an opinion within the first few minutes of seeing
+            a property. Presentation therefore matters both online and during
+            an in-person showing.
+          </p>
+
+          <p>
+            Preparation does not necessarily mean completing a major renovation.
+            Depending on the property, simple improvements can make a meaningful
+            difference.
           </p>
 
           <ul>
-            <li>
-              <a href="../coral-gables-realtor/">Coral Gables Real Estate</a>
-            </li>
-
-            <li>
-              <a href="../coconut-grove-realtor/">Coconut Grove Real Estate</a>
-            </li>
-
-            <li>
-              <a href="../pinecrest-realtor/">Pinecrest Real Estate</a>
-            </li>
-
-            <li>
-              <a href="../doral-realtor/">Doral Real Estate</a>
-            </li>
-
-            <li>
-              <a href="../miami-beach-realtor/">Miami Beach Real Estate</a>
-            </li>
-
-            <li>
-              <a href="../palmetto-bay-realtor/">Palmetto Bay Real Estate</a>
-            </li>
-
-            <li>
-              <a href="../cutler-bay-realtor/">Cutler Bay Real Estate</a>
-            </li>
+            <li>Deep cleaning</li>
+            <li>Removing unnecessary clutter</li>
+            <li>Improving exterior presentation</li>
+            <li>Completing obvious minor repairs</li>
+            <li>Improving lighting</li>
+            <li>Organizing rooms to improve visual space</li>
           </ul>
 
-
-          <h2>
-            Ready to Sell Your Miami Property?
-          </h2>
-
-          <p>
-            If you are considering selling, the first step is understanding
-            your property's position in the current market and developing a
-            strategy based on your goals.
-          </p>
-
-          <p>
-            Visit my
-            <a href="../sell-your-home-miami/">Miami home selling page</a>
-            to learn more about my approach to pricing, marketing and selling
-            properties throughout Miami and South Florida.
-          </p>
-
-        </article>
-
-
-        <aside class="sidebar">
-
-          <div class="sidebar-box">
-
-            <div class="eyebrow">
-              THINKING OF SELLING?
-            </div>
-
-            <h3>
-              Start With Your Property
-            </h3>
-
-            <p>
-              Get a personalized analysis of your property and discuss the
-              best strategy for bringing it to market.
-            </p>
-
-            <a href="../sell-your-home-miami/" class="btn">
-              SELL YOUR HOME
-            </a>
-
-          </div>
-
-
-          <div class="sidebar-box sidebar-contact">
-
-            <div class="eyebrow">
-              CONTACT
-            </div>
-
-            <h3>
-              Roberth Castro
-            </h3>
-
-            <p>
-              REALTOR®<br>
-              Keller Williams Capital Realty
-            </p>
-
-            <a href="tel:+17862106833">
-              (786) 210-6833
-            </a>
-
-            <a href="mailto:rcastrop@kw.com">
-              rcastrop@kw.com
-            </a>
-
-          </div>
-
-        </aside>
-
-      </div>
-
-    </div>
-
-  </main>
-
-
-  <section class="cta">
-
-    <div class="container">
-
-      <div class="cta-content">
-
-        <div class="eyebrow">
-          SELLING IN MIAMI?
         </div>
 
-        <h2>
-          Let's Build the Right Strategy for Your Property
-        </h2>
+
+        <div class="step">
+
+          <div class="step-number">STEP 04</div>
+
+          <h2>Market the Home Professionally</h2>
+
+          <p>
+            Strong real estate marketing is designed to put the property in
+            front of qualified buyers and the agents who represent them.
+            Professional presentation is especially important because many
+            buyers begin their search online.
+          </p>
+
+          <p>
+            Depending on the property and marketing strategy, exposure may
+            include professional photography, online real estate platforms,
+            agent networks, social media, direct outreach, buyer databases
+            and open houses.
+          </p>
+
+          <p>
+            The objective is not simply to generate views. It is to generate
+            meaningful interest from buyers who may actually be in a position
+            to purchase the property.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">STEP 05</div>
+
+          <h2>Evaluate Offers Beyond the Purchase Price</h2>
+
+          <p>
+            The highest offer is not automatically the strongest offer.
+            Sellers should evaluate the entire proposal before deciding
+            how to respond.
+          </p>
+
+          <p>Important considerations may include:</p>
+
+          <ul>
+            <li>Purchase price</li>
+            <li>Financing terms</li>
+            <li>Proof of funds or loan pre-approval</li>
+            <li>Deposit amount</li>
+            <li>Inspection terms</li>
+            <li>Appraisal considerations</li>
+            <li>Requested credits or concessions</li>
+            <li>Closing date</li>
+            <li>Other contingencies</li>
+          </ul>
+
+          <p>
+            Understanding the complete structure of an offer helps a seller
+            compare both the financial value and the probability of the
+            transaction successfully reaching closing.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">STEP 06</div>
+
+          <h2>Navigate Inspections, Appraisal and Financing</h2>
+
+          <p>
+            An accepted contract is an important milestone, but several steps
+            may remain before closing.
+          </p>
+
+          <p>
+            Depending on the contract and how the buyer is purchasing the
+            property, the transaction may involve inspections, an appraisal,
+            lender approval, title work and other contractual requirements.
+          </p>
+
+          <p>
+            Keeping track of deadlines and responding quickly when an issue
+            arises can be important to maintaining the transaction.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">STEP 07</div>
+
+          <h2>Prepare for Closing</h2>
+
+          <p>
+            As the transaction approaches closing, the parties work toward
+            satisfying the remaining contractual and title requirements.
+            Closing documents are prepared, final figures are reviewed and
+            the transaction is completed according to the contract.
+          </p>
+
+          <p>
+            Sellers should understand their estimated proceeds before closing
+            so they have a clear picture of the financial result of the
+            transaction.
+          </p>
+
+        </div>
+
+
+        <h2>What Does It Cost to Sell a House in Miami?</h2>
 
         <p>
-          Every property and every seller has different goals. Contact me
-          to discuss your home, your timeline and the current market.
+          The cost of selling a property depends on the specific transaction.
+          Potential seller expenses can include brokerage compensation,
+          closing-related charges, taxes, title-related expenses, agreed
+          repairs, credits or other negotiated costs.
         </p>
 
-        <div class="cta-buttons">
+
+        <div class="info-box">
+
+          <h3>Know Your Estimated Net Proceeds</h3>
+
+          <p>
+            Before accepting an offer, it is useful to evaluate the estimated
+            amount you may receive after mortgages, liens and applicable
+            transaction expenses are accounted for.
+          </p>
+
+        </div>
+
+
+        <h2>Should You Sell Before Buying Your Next Home?</h2>
+
+        <p>
+          This depends on your finances, timing and individual goals.
+          Some homeowners need proceeds from their current property before
+          purchasing another home. Others may have the ability to purchase
+          first and sell afterward.
+        </p>
+
+        <p>
+          When both transactions are connected, planning the timeline early
+          can reduce unnecessary pressure and help coordinate the transition
+          between properties.
+        </p>
+
+
+        <h2>Selling a Home in Different Miami Neighborhoods</h2>
+
+        <p>
+          The strategy used to sell a property should reflect the specific
+          neighborhood and the buyers most likely to consider that property.
+          Explore some of the Miami and South Florida communities I serve:
+        </p>
+
+        <ul>
+          <li><a href="../coral-gables-realtor/">Coral Gables Real Estate</a></li>
+          <li><a href="../coconut-grove-realtor/">Coconut Grove Real Estate</a></li>
+          <li><a href="../pinecrest-realtor/">Pinecrest Real Estate</a></li>
+          <li><a href="../doral-realtor/">Doral Real Estate</a></li>
+          <li><a href="../miami-beach-realtor/">Miami Beach Real Estate</a></li>
+          <li><a href="../palmetto-bay-realtor/">Palmetto Bay Real Estate</a></li>
+          <li><a href="../cutler-bay-realtor/">Cutler Bay Real Estate</a></li>
+        </ul>
+
+
+        <h2>Ready to Sell Your Miami Property?</h2>
+
+        <p>
+          If you are considering selling, the first step is understanding your
+          property's position in the current market and developing a strategy
+          based on your goals.
+        </p>
+
+        <p>
+          Visit my
+          <a href="../sell-your-home-miami/">Miami home selling page</a>
+          to learn more about my approach to pricing, marketing and selling
+          properties throughout Miami and South Florida.
+        </p>
+
+      </article>
+
+
+      <aside class="sidebar">
+
+        <div class="sidebar-box">
+
+          <div class="eyebrow">
+            THINKING OF SELLING?
+          </div>
+
+          <h3>Start With Your Property</h3>
+
+          <p>
+            Get a personalized analysis of your property and discuss the
+            best strategy for bringing it to market.
+          </p>
 
           <a href="../sell-your-home-miami/" class="btn">
             SELL YOUR HOME
           </a>
 
-          <a href="tel:+17862106833" class="btn btn-white">
-            CALL (786) 210-6833
+        </div>
+
+
+        <div class="sidebar-box sidebar-contact">
+
+          <div class="eyebrow">CONTACT</div>
+
+          <h3>Roberth Castro</h3>
+
+          <p>
+            REALTOR®<br>
+            Keller Williams Capital Realty
+          </p>
+
+          <a href="tel:+17862106833">
+            (786) 210-6833
+          </a>
+
+          <a href="mailto:rcastrop@kw.com">
+            rcastrop@kw.com
+          </a>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<section class="cta">
+
+  <div class="container">
+
+    <div class="cta-content">
+
+      <div class="eyebrow">
+        SELLING IN MIAMI?
+      </div>
+
+      <h2>
+        Let's Build the Right Strategy for Your Property
+      </h2>
+
+      <p>
+        Every property and every seller has different goals. Contact me to
+        discuss your home, your timeline and the current market.
+      </p>
+
+      <div class="cta-buttons">
+
+        <a href="../sell-your-home-miami/" class="btn">
+          SELL YOUR HOME
+        </a>
+
+        <a href="tel:+17862106833" class="btn btn-white">
+          CALL (786) 210-6833
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="faq">
+
+  <div class="container">
+
+    <div class="faq-header">
+
+      <div class="eyebrow">
+        SELLER QUESTIONS
+      </div>
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+    </div>
+
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+
+        <h3>
+          How do I determine the right asking price for my Miami home?
+        </h3>
+
+        <p>
+          A strong asking price should consider recent comparable sales,
+          current competition, property condition, location and current
+          buyer demand.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>
+          Should I make repairs before selling my house?
+        </h3>
+
+        <p>
+          It depends on the property and the likely return on the repair.
+          Cosmetic improvements and deferred maintenance can affect buyer
+          perception, but not every renovation will produce a positive return.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>
+          How long does it take to sell a house in Miami?
+        </h3>
+
+        <p>
+          The timeline varies based on pricing, location, condition, demand,
+          financing and the terms of the transaction.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>
+          What happens after I accept an offer?
+        </h3>
+
+        <p>
+          After an offer is accepted, the transaction typically moves through
+          escrow, inspections, financing or appraisal when applicable, title
+          work and the closing process according to the contract.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-row">
+
+      <div>
+
+        <div class="footer-name">
+          Roberth Castro, REALTOR®
+        </div>
+
+        <div class="broker-name">
+          Keller Williams Capital Realty
+        </div>
+
+        <div>
+          Florida License #3467807
+        </div>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <div>
+          <a href="tel:+17862106833">
+            (786) 210-6833
+          </a>
+        </div>
+
+        <div>
+          <a href="mailto:rcastrop@kw.com">
+            rcastrop@kw.com
+          </a>
+        </div>
+
+        <div>
+          <a href="../">
+            roberthcastrop.com
+          </a>
+        </div>
+
+        <div class="legal-links">
+
+          <a href="../privacy-policy.html">
+            Privacy Policy
+          </a>
+
+          &nbsp; | &nbsp;
+
+          <a href="../sms-terms.html">
+            SMS Terms
           </a>
 
         </div>
@@ -1230,193 +1302,27 @@
 
     </div>
 
-  </section>
+  </div>
+
+</footer>
 
 
-  <section class="faq">
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    <div class="container">
+  menuButton.addEventListener("click", function () {
+    const isOpen = mobileMenu.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
 
-      <div class="faq-header">
-
-        <div class="eyebrow">
-          SELLER QUESTIONS
-        </div>
-
-        <h2>
-          Frequently Asked Questions
-        </h2>
-
-      </div>
-
-
-      <div class="faq-list">
-
-        <div class="faq-item">
-
-          <h3>
-            How do I determine the right asking price for my Miami home?
-          </h3>
-
-          <p>
-            A strong asking price should consider recent comparable sales,
-            current competition, property condition, location and current
-            buyer demand.
-          </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <h3>
-            Should I make repairs before selling my house?
-          </h3>
-
-          <p>
-            It depends on the property and the likely return on the repair.
-            Cosmetic improvements and deferred maintenance can affect buyer
-            perception, but not every renovation will produce a positive return.
-          </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <h3>
-            How long does it take to sell a house in Miami?
-          </h3>
-
-          <p>
-            The timeline varies based on pricing, location, condition, demand,
-            financing and the terms of the transaction. Proper positioning can
-            improve the probability of attracting qualified buyers.
-          </p>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <h3>
-            What happens after I accept an offer?
-          </h3>
-
-          <p>
-            After an offer is accepted, the transaction typically moves through
-            escrow, inspections, financing or appraisal when applicable, title
-            work and the closing process according to the contract.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-row">
-
-        <div>
-
-          <div class="footer-name">
-            Roberth Castro, REALTOR®
-          </div>
-
-          <div class="broker-name">
-            Keller Williams Capital Realty
-          </div>
-
-          <div>
-            Florida License #3467807
-          </div>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-          <div>
-            <a href="tel:+17862106833">
-              (786) 210-6833
-            </a>
-          </div>
-
-          <div>
-            <a href="mailto:rcastrop@kw.com">
-              rcastrop@kw.com
-            </a>
-          </div>
-
-          <div>
-            <a href="../">
-              roberthcastrop.com
-            </a>
-          </div>
-
-          <div class="legal-links">
-
-            <a href="../privacy-policy.html">
-              Privacy Policy
-            </a>
-
-            &nbsp; | &nbsp;
-
-            <a href="../sms-terms.html">
-              SMS Terms
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <script>
-
-    const menuButton = document.getElementById("menuButton");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    menuButton.addEventListener("click", function () {
-
-      const isOpen = mobileMenu.classList.toggle("open");
-
-      menuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
-
+  mobileMenu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      mobileMenu.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
     });
-
-    mobileMenu.querySelectorAll("a").forEach(function (link) {
-
-      link.addEventListener("click", function () {
-
-        mobileMenu.classList.remove("open");
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      });
-
-    });
-
-  </script>
+  });
+</script>
 
 </body>
-
 </html>
