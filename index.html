@@ -411,6 +411,59 @@
       line-height: 1.6;
     }
 
+    .seller-guide {
+      background: #ffffff;
+    }
+
+    .guide-card {
+      max-width: 1050px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 48% 52%;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .guide-image {
+      min-height: 430px;
+      background:
+        linear-gradient(
+          rgba(3, 15, 28, 0.10),
+          rgba(3, 15, 28, 0.10)
+        ),
+        url("luxury-home.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .guide-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 55px;
+    }
+
+    .guide-content h2 {
+      margin: 12px 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 39px;
+      line-height: 1.15;
+      font-weight: 400;
+    }
+
+    .guide-content p {
+      margin: 0 0 25px;
+      color: var(--gray);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .guide-content .btn {
+      align-self: flex-start;
+    }
+
     .sold-section {
       background: #ffffff;
       text-align: center;
@@ -665,6 +718,18 @@
         padding: 60px 30px;
       }
 
+      .guide-card {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-image {
+        min-height: 350px;
+      }
+
+      .guide-content {
+        padding: 45px 35px;
+      }
+
       .contact-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -738,6 +803,18 @@
         font-size: 39px;
       }
 
+      .guide-image {
+        min-height: 280px;
+      }
+
+      .guide-content {
+        padding: 38px 25px;
+      }
+
+      .guide-content h2 {
+        font-size: 32px;
+      }
+
       .contact-form {
         grid-template-columns: 1fr;
       }
@@ -798,6 +875,7 @@
 <body>
 
   <header>
+
     <div class="container">
 
       <nav>
@@ -813,19 +891,29 @@
 
         <div class="menu">
 
-          <a
-            href="https://roberthcastrop.kw.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="search-properties/">
             BUY
           </a>
 
-          <a href="sell-your-home-miami/">SELL</a>
-          <a href="#areas">AREAS</a>
-          <a href="#about">ABOUT</a>
-          <a href="#sold">SOLD</a>
-          <a href="#contact">CONTACT</a>
+          <a href="sell-your-home-miami/">
+            SELL
+          </a>
+
+          <a href="#areas">
+            AREAS
+          </a>
+
+          <a href="#about">
+            ABOUT
+          </a>
+
+          <a href="#sold">
+            SOLD
+          </a>
+
+          <a href="#contact">
+            CONTACT
+          </a>
 
         </div>
 
@@ -844,23 +932,34 @@
 
       <div class="mobile-menu" id="mobileMenu">
 
-        <a
-          href="https://roberthcastrop.kw.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="search-properties/">
           BUY / SEARCH PROPERTIES
         </a>
 
-        <a href="sell-your-home-miami/">SELL</a>
-        <a href="#areas" onclick="closeMenu()">AREAS</a>
-        <a href="#about" onclick="closeMenu()">ABOUT</a>
-        <a href="#sold" onclick="closeMenu()">SOLD</a>
-        <a href="#contact" onclick="closeMenu()">CONTACT</a>
+        <a href="sell-your-home-miami/">
+          SELL
+        </a>
+
+        <a href="#areas" onclick="closeMenu()">
+          AREAS
+        </a>
+
+        <a href="#about" onclick="closeMenu()">
+          ABOUT
+        </a>
+
+        <a href="#sold" onclick="closeMenu()">
+          SOLD
+        </a>
+
+        <a href="#contact" onclick="closeMenu()">
+          CONTACT
+        </a>
 
       </div>
 
     </div>
+
   </header>
 
 
@@ -885,19 +984,11 @@
 
         <div class="buttons">
 
-          <a
-            href="https://roberthcastrop.kw.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn"
-          >
+          <a href="search-properties/" class="btn">
             SEARCH PROPERTIES
           </a>
 
-          <a
-            href="sell-your-home-miami/"
-            class="btn btn-white"
-          >
+          <a href="sell-your-home-miami/" class="btn btn-white">
             SELL YOUR HOME
           </a>
 
@@ -914,12 +1005,7 @@
 
     <div class="container services-grid">
 
-      <a
-        href="https://roberthcastrop.kw.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="service"
-      >
+      <a href="search-properties/" class="service">
 
         <div class="service-icon">⌂</div>
 
@@ -932,10 +1018,7 @@
       </a>
 
 
-      <a
-        href="sell-your-home-miami/"
-        class="service"
-      >
+      <a href="sell-your-home-miami/" class="service">
 
         <div class="service-icon">◇</div>
 
@@ -948,12 +1031,7 @@
       </a>
 
 
-      <a
-        href="https://roberthcastrop.kw.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="service"
-      >
+      <a href="search-properties/" class="service">
 
         <div class="service-icon">↗</div>
 
@@ -1078,12 +1156,11 @@
       </div>
 
       <div>
-        <a
-          href="tel:+17862106833"
-          class="btn btn-white"
-        >
+
+        <a href="tel:+17862106833" class="btn btn-white">
           (786) 210-6833
         </a>
+
       </div>
 
     </div>
@@ -1113,12 +1190,7 @@
 
       <div class="opportunity-grid">
 
-        <a
-          class="opportunity-card"
-          href="https://roberthcastrop.kw.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="opportunity-card" href="search-properties/">
 
           <img
             src="brickell.jpg"
@@ -1140,10 +1212,7 @@
         </a>
 
 
-        <a
-          class="opportunity-card"
-          href="sell-your-home-miami/"
-        >
+        <a class="opportunity-card" href="sell-your-home-miami/">
 
           <img
             src="luxury-home.jpg"
@@ -1165,12 +1234,7 @@
         </a>
 
 
-        <a
-          class="opportunity-card"
-          href="https://roberthcastrop.kw.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="opportunity-card" href="search-properties/">
 
           <img
             src="aerial-home.jpg"
@@ -1190,6 +1254,50 @@
           </div>
 
         </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="section seller-guide">
+
+    <div class="container">
+
+      <div class="guide-card">
+
+        <div
+          class="guide-image"
+          role="img"
+          aria-label="Miami home seller guide"
+        ></div>
+
+        <div class="guide-content">
+
+          <div class="eyebrow">
+            MIAMI SELLER GUIDE
+          </div>
+
+          <h2>
+            How to Sell a House in Miami
+          </h2>
+
+          <p>
+            Learn the key steps involved in selling a Miami property—from pricing
+            and preparing your home to marketing, evaluating offers, inspections
+            and closing.
+          </p>
+
+          <a
+            href="how-to-sell-a-house-in-miami/"
+            class="btn"
+          >
+            READ THE SELLER GUIDE
+          </a>
+
+        </div>
 
       </div>
 
@@ -1336,9 +1444,11 @@
             placeholder="Message"
           ></textarea>
 
+
           <div class="consent-group">
 
             <div class="consent-row">
+
               <input
                 type="checkbox"
                 id="termsConsent"
@@ -1353,10 +1463,12 @@
                 and
                 <a href="/sms-terms.html" target="_blank">SMS Terms & Conditions</a>.
               </label>
+
             </div>
 
 
             <div class="consent-row">
+
               <input
                 type="checkbox"
                 id="smsConsent"
@@ -1367,10 +1479,12 @@
               <label for="smsConsent">
                 By checking this box, I agree to receive marketing and promotional SMS text messages from Roberth Castro, REALTOR® with Keller Williams Capital Realty, regarding real estate products and services. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. Consent is not a condition of purchase.
               </label>
+
             </div>
 
 
             <div class="consent-row">
+
               <input
                 type="checkbox"
                 id="callConsent"
@@ -1381,10 +1495,12 @@
               <label for="callConsent">
                 By checking this box, I agree to receive marketing and promotional phone calls from Roberth Castro, REALTOR® with Keller Williams Capital Realty regarding real estate products and services. Consent is not a condition of purchase.
               </label>
+
             </div>
 
 
             <div class="consent-row">
+
               <input
                 type="checkbox"
                 id="transactionalSmsConsent"
@@ -1395,6 +1511,7 @@
               <label for="transactionalSmsConsent">
                 By checking this box, I agree to receive transactional SMS text messages from Roberth Castro, REALTOR® with Keller Williams Capital Realty, regarding my real estate inquiries, property information, buying and selling information, appointment coordination, and follow-ups. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. Consent is not a condition of purchase.
               </label>
+
             </div>
 
           </div>
@@ -1432,9 +1549,17 @@
         </div>
 
         <div class="legal-links">
-          <a href="/privacy-policy.html">Privacy Policy</a>
+
+          <a href="/privacy-policy.html">
+            Privacy Policy
+          </a>
+
           &nbsp; · &nbsp;
-          <a href="/sms-terms.html">SMS Terms & Conditions</a>
+
+          <a href="/sms-terms.html">
+            SMS Terms & Conditions
+          </a>
+
         </div>
 
       </div>
@@ -1464,7 +1589,9 @@
 
 
   <script>
+
     function toggleMenu() {
+
       const menu = document.getElementById("mobileMenu");
       const button = document.getElementById("menuButton");
 
@@ -1474,15 +1601,20 @@
         "aria-expanded",
         menu.classList.contains("open") ? "true" : "false"
       );
+
     }
 
+
     function closeMenu() {
+
       const menu = document.getElementById("mobileMenu");
       const button = document.getElementById("menuButton");
 
       menu.classList.remove("open");
       button.setAttribute("aria-expanded", "false");
+
     }
+
   </script>
 
 </body>
