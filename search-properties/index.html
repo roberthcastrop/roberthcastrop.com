@@ -59,8 +59,6 @@
       padding: 0 28px;
     }
 
-    /* HEADER */
-
     header {
       position: absolute;
       top: 0;
@@ -113,10 +111,7 @@
       transition: 0.2s;
     }
 
-    .menu a:hover {
-      color: var(--gold);
-    }
-
+    .menu a:hover,
     .menu .active {
       color: var(--gold);
     }
@@ -153,12 +148,6 @@
       font-weight: 700;
     }
 
-    .mobile-menu a:last-child {
-      border-bottom: 0;
-    }
-
-    /* HERO */
-
     .hero {
       min-height: 540px;
       display: flex;
@@ -171,7 +160,6 @@
           rgba(3, 15, 28, 0.38)
         ),
         url("../luxury-home.jpg");
-
       background-size: cover;
       background-position: center;
     }
@@ -233,8 +221,6 @@
       color: var(--navy);
     }
 
-    /* SEARCH INTRO */
-
     .search-intro {
       padding: 70px 0 45px;
       text-align: center;
@@ -256,8 +242,6 @@
       line-height: 1.75;
     }
 
-    /* QUICK OPTIONS */
-
     .quick-options {
       padding: 0 0 55px;
       background: #ffffff;
@@ -273,7 +257,6 @@
       padding: 25px 20px;
       border: 1px solid var(--border);
       text-align: center;
-      cursor: pointer;
       transition: 0.25s;
       background: #ffffff;
     }
@@ -304,8 +287,6 @@
       line-height: 1.5;
     }
 
-    /* IDX */
-
     .idx-section {
       padding: 60px 0 80px;
       background: var(--light);
@@ -332,21 +313,19 @@
 
     .idx-wrapper {
       width: 100%;
-      overflow: hidden;
-      border: 1px solid #d8d8d8;
       background: #ffffff;
+      border: 1px solid #d8d8d8;
       box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+      overflow: hidden;
     }
 
     .idx-wrapper iframe {
       display: block;
       width: 100%;
-      min-height: 1500px;
+      height: 1800px;
       border: 0;
       background: #ffffff;
     }
-
-    /* ASSISTANCE */
 
     .assistance {
       padding: 80px 0;
@@ -382,8 +361,6 @@
       flex-wrap: wrap;
     }
 
-    /* DISCLAIMER */
-
     .idx-disclaimer {
       padding: 35px 0;
       background: #ffffff;
@@ -397,8 +374,6 @@
       max-width: 950px;
       margin: 0 auto;
     }
-
-    /* FOOTER */
 
     footer {
       padding: 35px 0;
@@ -445,8 +420,6 @@
       text-decoration: underline;
     }
 
-    /* RESPONSIVE */
-
     @media (max-width: 900px) {
 
       .menu {
@@ -474,7 +447,7 @@
       }
 
       .idx-wrapper iframe {
-        min-height: 1700px;
+        height: 2000px;
       }
 
       .footer-contact {
@@ -502,10 +475,6 @@
         letter-spacing: 1.4px;
       }
 
-      .hero {
-        min-height: 500px;
-      }
-
       .hero h1 {
         font-size: 42px;
       }
@@ -514,25 +483,16 @@
         font-size: 17px;
       }
 
-      .search-intro {
-        padding: 60px 0 35px;
-      }
-
       .search-intro h2,
       .idx-header h2,
       .assistance h2 {
         font-size: 34px;
       }
 
-      .idx-section {
-        padding: 45px 0 60px;
-      }
-
       .idx-wrapper iframe {
-        min-height: 1900px;
+        height: 2200px;
       }
     }
-
   </style>
 
   <script type="application/ld+json">
@@ -579,8 +539,6 @@
 
 <body>
 
-  <!-- HEADER -->
-
   <header>
 
     <div class="container">
@@ -601,15 +559,10 @@
         <div class="menu">
 
           <a class="active" href="#property-search">BUY</a>
-
           <a href="../sell-your-home-miami/">SELL</a>
-
           <a href="../#areas">AREAS</a>
-
           <a href="../#about">ABOUT</a>
-
           <a href="../#sold">SOLD</a>
-
           <a href="../#contact">CONTACT</a>
 
         </div>
@@ -629,15 +582,10 @@
       <div class="mobile-menu" id="mobileMenu">
 
         <a href="#property-search">BUY / SEARCH PROPERTIES</a>
-
         <a href="../sell-your-home-miami/">SELL</a>
-
         <a href="../#areas">AREAS</a>
-
         <a href="../#about">ABOUT</a>
-
         <a href="../#sold">SOLD</a>
-
         <a href="../#contact">CONTACT</a>
 
       </div>
@@ -646,8 +594,6 @@
 
   </header>
 
-
-  <!-- HERO -->
 
   <section class="hero">
 
@@ -689,8 +635,6 @@
   </section>
 
 
-  <!-- INTRO -->
-
   <section class="search-intro">
 
     <div class="container">
@@ -713,8 +657,6 @@
 
   </section>
 
-
-  <!-- QUICK OPTIONS -->
 
   <section class="quick-options">
 
@@ -767,8 +709,6 @@
   </section>
 
 
-  <!-- IDX SEARCH -->
-
   <section class="idx-section" id="property-search">
 
     <div class="container">
@@ -794,12 +734,13 @@
       <div class="idx-wrapper">
 
         <iframe
-          src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=8bcd1dd2"
+          src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=d2be1173"
           width="100%"
-          height="1500"
+          height="1800"
+          frameborder="0"
+          marginwidth="0"
+          marginheight="0"
           title="Miami and South Florida MLS Property Search"
-          loading="lazy"
-          allowfullscreen
         ></iframe>
 
       </div>
@@ -808,8 +749,6 @@
 
   </section>
 
-
-  <!-- ASSISTANCE -->
 
   <section class="assistance">
 
@@ -855,8 +794,6 @@
   </section>
 
 
-  <!-- IDX DISCLAIMER -->
-
   <section class="idx-disclaimer">
 
     <div class="container">
@@ -873,8 +810,6 @@
 
   </section>
 
-
-  <!-- FOOTER -->
 
   <footer>
 
@@ -914,7 +849,7 @@
           </div>
 
           <div>
-            <a href="https://roberthcastrop.com/">
+            <a href="../">
               roberthcastrop.com
             </a>
           </div>
@@ -957,7 +892,6 @@
       );
 
     });
-
 
     mobileMenu.querySelectorAll("a").forEach(function (link) {
 
