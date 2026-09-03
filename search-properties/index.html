@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,7 +132,7 @@
       right: 20px;
       padding: 12px 20px;
       background: var(--navy);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 12px 35px rgba(0,0,0,.3);
     }
 
     .mobile-menu.open {
@@ -143,7 +142,7 @@
     .mobile-menu a {
       display: block;
       padding: 15px 6px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255,255,255,.12);
       font-size: 13px;
       font-weight: 700;
     }
@@ -156,8 +155,8 @@
       background:
         linear-gradient(
           90deg,
-          rgba(3, 15, 28, 0.90),
-          rgba(3, 15, 28, 0.38)
+          rgba(3,15,28,.90),
+          rgba(3,15,28,.38)
         ),
         url("../luxury-home.jpg");
       background-size: cover;
@@ -206,14 +205,14 @@
       color: var(--navy);
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.7px;
+      letter-spacing: .7px;
       cursor: pointer;
-      transition: 0.25s;
+      transition: .25s;
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      opacity: 0.94;
+      opacity: .94;
     }
 
     .btn-white {
@@ -249,7 +248,7 @@
 
     .quick-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 16px;
     }
 
@@ -257,7 +256,7 @@
       padding: 25px 20px;
       border: 1px solid var(--border);
       text-align: center;
-      transition: 0.25s;
+      transition: .25s;
       background: #ffffff;
     }
 
@@ -266,18 +265,11 @@
       transform: translateY(-3px);
     }
 
-    .quick-card span {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--gold);
-      font-size: 25px;
-    }
-
     .quick-card strong {
       display: block;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 400;
     }
 
@@ -313,16 +305,16 @@
 
     .idx-wrapper {
       width: 100%;
+      height: 1900px;
       background: #ffffff;
       border: 1px solid #d8d8d8;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
-      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0,0,0,.07);
     }
 
     .idx-wrapper iframe {
       display: block;
       width: 100%;
-      height: 1800px;
+      height: 100%;
       border: 0;
       background: #ffffff;
     }
@@ -400,16 +392,11 @@
       margin: 6px 0;
       color: #ffffff;
       font-weight: 700;
-      letter-spacing: 0.3px;
     }
 
     .footer-contact {
       text-align: right;
       line-height: 1.8;
-    }
-
-    footer a:hover {
-      color: #ffffff;
     }
 
     .legal-links {
@@ -446,8 +433,8 @@
         grid-template-columns: 1fr;
       }
 
-      .idx-wrapper iframe {
-        height: 2000px;
+      .idx-wrapper {
+        height: 2100px;
       }
 
       .footer-contact {
@@ -472,7 +459,6 @@
 
       .brand small {
         font-size: 8px;
-        letter-spacing: 1.4px;
       }
 
       .hero h1 {
@@ -489,8 +475,8 @@
         font-size: 34px;
       }
 
-      .idx-wrapper iframe {
-        height: 2200px;
+      .idx-wrapper {
+        height: 2300px;
       }
     }
   </style>
@@ -534,255 +520,309 @@
     ]
   }
   </script>
-
 </head>
 
 <body>
 
-  <header>
+<header>
+  <div class="container">
+    <nav>
 
-    <div class="container">
+      <a class="brand" href="../">
+        <img src="../logo.png" alt="Roberth Castro logo">
 
-      <nav>
-
-        <a class="brand" href="../">
-
-          <img src="../logo.png" alt="Roberth Castro logo">
-
-          <div>
-            ROBERTH CASTRO
-            <small>KELLER WILLIAMS CAPITAL REALTY</small>
-          </div>
-
-        </a>
-
-        <div class="menu">
-
-          <a class="active" href="#property-search">BUY</a>
-          <a href="../sell-your-home-miami/">SELL</a>
-          <a href="../#areas">AREAS</a>
-          <a href="../#about">ABOUT</a>
-          <a href="../#sold">SOLD</a>
-          <a href="../#contact">CONTACT</a>
-
+        <div>
+          ROBERTH CASTRO
+          <small>KELLER WILLIAMS CAPITAL REALTY</small>
         </div>
+      </a>
 
-        <button
-          class="mobile-button"
-          id="menuButton"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          ☰
-        </button>
-
-      </nav>
-
-      <div class="mobile-menu" id="mobileMenu">
-
-        <a href="#property-search">BUY / SEARCH PROPERTIES</a>
+      <div class="menu">
+        <a class="active" href="#property-search">BUY</a>
         <a href="../sell-your-home-miami/">SELL</a>
         <a href="../#areas">AREAS</a>
         <a href="../#about">ABOUT</a>
         <a href="../#sold">SOLD</a>
         <a href="../#contact">CONTACT</a>
-
       </div>
 
+      <button
+        class="mobile-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#property-search">BUY / SEARCH PROPERTIES</a>
+      <a href="../sell-your-home-miami/">SELL</a>
+      <a href="../#areas">AREAS</a>
+      <a href="../#about">ABOUT</a>
+      <a href="../#sold">SOLD</a>
+      <a href="../#contact">CONTACT</a>
     </div>
 
-  </header>
+  </div>
+</header>
 
 
-  <section class="hero">
+<section class="hero">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          MIAMI & SOUTH FLORIDA REAL ESTATE
-        </div>
-
-        <h1>
-          Find Your Next<br>
-          Property
-        </h1>
-
-        <p>
-          Search current real estate listings throughout Miami and South Florida.
-          Explore homes, condominiums and investment opportunities directly from
-          the MLS.
-        </p>
-
-        <div class="buttons">
-
-          <a href="#property-search" class="btn">
-            SEARCH PROPERTIES
-          </a>
-
-          <a href="tel:+17862106833" class="btn btn-white">
-            CALL ROBERTH
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="search-intro">
-
-    <div class="container">
+    <div class="hero-content">
 
       <div class="eyebrow">
-        PROPERTY SEARCH
+        MIAMI & SOUTH FLORIDA REAL ESTATE
+      </div>
+
+      <h1>
+        Find Your Next<br>
+        Property
+      </h1>
+
+      <p>
+        Search current real estate listings throughout Miami and South Florida.
+        Explore homes, condominiums and investment opportunities directly from
+        the MLS.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#property-search" class="btn">
+          SEARCH PROPERTIES
+        </a>
+
+        <a href="tel:+17862106833" class="btn btn-white">
+          CALL ROBERTH
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="search-intro">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      PROPERTY SEARCH
+    </div>
+
+    <h2>
+      Explore Miami & South Florida Real Estate
+    </h2>
+
+    <p>
+      Search available properties throughout Miami and South Florida.
+      Browse homes, condos and investment opportunities using the MLS
+      property search below.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="quick-options">
+
+  <div class="container">
+
+    <div class="quick-grid">
+
+      <a href="#property-search" class="quick-card">
+        <strong>Homes</strong>
+        <small>
+          Search single-family homes throughout Miami and South Florida.
+        </small>
+      </a>
+
+      <a href="#property-search" class="quick-card">
+        <strong>Condos</strong>
+        <small>
+          Explore condominiums in Miami, Brickell, Miami Beach and beyond.
+        </small>
+      </a>
+
+      <a href="#property-search" class="quick-card">
+        <strong>Investment Properties</strong>
+        <small>
+          Search real estate opportunities throughout South Florida.
+        </small>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="idx-section" id="property-search">
+
+  <div class="container">
+
+    <div class="idx-header">
+
+      <div class="eyebrow">
+        LIVE MLS SEARCH
       </div>
 
       <h2>
-        Explore Miami & South Florida Real Estate
+        Search Available Properties
       </h2>
 
       <p>
-        Use the MLS search below to explore available properties throughout
-        South Florida. Search by location, price, property type, bedrooms,
-        bathrooms and other criteria to find properties that match your goals.
+        Use the MLS search below to explore current properties throughout
+        Miami and South Florida.
       </p>
 
     </div>
 
-  </section>
 
+    <div class="idx-wrapper">
 
-  <section class="quick-options">
-
-    <div class="container">
-
-      <div class="quick-grid">
-
-        <a href="#property-search" class="quick-card">
-
-          <span>⌂</span>
-
-          <strong>Homes</strong>
-
-          <small>
-            Search single-family homes throughout Miami and South Florida.
-          </small>
-
-        </a>
-
-
-        <a href="#property-search" class="quick-card">
-
-          <span>◇</span>
-
-          <strong>Condos</strong>
-
-          <small>
-            Explore condominiums in Miami, Brickell, Miami Beach and beyond.
-          </small>
-
-        </a>
-
-
-        <a href="#property-search" class="quick-card">
-
-          <span>↗</span>
-
-          <strong>Investment Properties</strong>
-
-          <small>
-            Search real estate opportunities throughout South Florida.
-          </small>
-
-        </a>
-
-      </div>
+      <iframe
+        src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=d2be1173"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+        title="Miami and South Florida MLS Property Search"
+      ></iframe>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <section class="idx-section" id="property-search">
+<section class="assistance">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="idx-header">
+    <div class="assistance-grid">
+
+      <div>
 
         <div class="eyebrow">
-          LIVE MLS SEARCH
+          NEED HELP FINDING A PROPERTY?
         </div>
 
         <h2>
-          Search Available Properties
+          Let me help you with your search.
         </h2>
 
         <p>
-          Adjust the search criteria below to explore current listings and
-          discover properties throughout Miami and South Florida.
+          Tell me what you're looking for and I can help you identify
+          properties that match your preferred location, budget and
+          real estate goals.
         </p>
 
       </div>
 
 
-      <div class="idx-wrapper">
+      <div class="assistance-buttons">
 
-        <iframe
-          src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=d2be1173"
-          width="100%"
-          height="1800"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          title="Miami and South Florida MLS Property Search"
-        ></iframe>
+        <a href="tel:+17862106833" class="btn">
+          (786) 210-6833
+        </a>
+
+        <a href="mailto:rcastrop@kw.com" class="btn btn-white">
+          EMAIL ROBERTH
+        </a>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <section class="assistance">
+<section class="idx-disclaimer">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="assistance-grid">
+    <p>
+      Property information displayed through the MLS search is provided for
+      consumers' personal, non-commercial use and may not be used for any
+      purpose other than identifying prospective properties consumers may be
+      interested in purchasing. Information is deemed reliable but is not
+      guaranteed and should be independently verified.
+    </p>
 
-        <div>
+  </div>
 
-          <div class="eyebrow">
-            NEED HELP FINDING A PROPERTY?
-          </div>
+</section>
 
-          <h2>
-            Let me help you with your search.
-          </h2>
 
-          <p>
-            If you find a property you like—or if you want me to build a
-            personalized search based on your budget, preferred areas and
-            property requirements—contact me directly.
-          </p>
+<footer>
 
+  <div class="container">
+
+    <div class="footer-row">
+
+      <div>
+
+        <div class="footer-name">
+          Roberth Castro, REALTOR®
         </div>
 
+        <div class="broker-name">
+          Keller Williams Capital Realty
+        </div>
 
-        <div class="assistance-buttons">
+        <div>
+          Florida License #3467807
+        </div>
 
-          <a href="tel:+17862106833" class="btn">
+      </div>
+
+
+      <div class="footer-contact">
+
+        <div>
+          <a href="tel:+17862106833">
             (786) 210-6833
           </a>
+        </div>
 
-          <a href="mailto:rcastrop@kw.com" class="btn btn-white">
-            EMAIL ROBERTH
+        <div>
+          <a href="mailto:rcastrop@kw.com">
+            rcastrop@kw.com
+          </a>
+        </div>
+
+        <div>
+          <a href="../">
+            roberthcastrop.com
+          </a>
+        </div>
+
+        <div class="legal-links">
+
+          <a href="../privacy-policy.html">
+            Privacy Policy
+          </a>
+
+          &nbsp; | &nbsp;
+
+          <a href="../sms-terms.html">
+            SMS Terms
           </a>
 
         </div>
@@ -791,125 +831,31 @@
 
     </div>
 
-  </section>
+  </div>
+
+</footer>
 
 
-  <section class="idx-disclaimer">
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    <div class="container">
+  menuButton.addEventListener("click", function () {
+    const isOpen = mobileMenu.classList.toggle("open");
 
-      <p>
-        Property information displayed through the MLS search is provided for
-        consumers' personal, non-commercial use and may not be used for any
-        purpose other than identifying prospective properties consumers may be
-        interested in purchasing. Information is deemed reliable but is not
-        guaranteed and should be independently verified.
-      </p>
+    menuButton.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+  });
 
-    </div>
-
-  </section>
-
-
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-row">
-
-        <div>
-
-          <div class="footer-name">
-            Roberth Castro, REALTOR®
-          </div>
-
-          <div class="broker-name">
-            Keller Williams Capital Realty
-          </div>
-
-          <div>
-            Florida License #3467807
-          </div>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-          <div>
-            <a href="tel:+17862106833">
-              (786) 210-6833
-            </a>
-          </div>
-
-          <div>
-            <a href="mailto:rcastrop@kw.com">
-              rcastrop@kw.com
-            </a>
-          </div>
-
-          <div>
-            <a href="../">
-              roberthcastrop.com
-            </a>
-          </div>
-
-          <div class="legal-links">
-
-            <a href="../privacy-policy.html">
-              Privacy Policy
-            </a>
-
-            &nbsp; | &nbsp;
-
-            <a href="../sms-terms.html">
-              SMS Terms
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <script>
-
-    const menuButton = document.getElementById("menuButton");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    menuButton.addEventListener("click", function () {
-
-      const isOpen = mobileMenu.classList.toggle("open");
-
-      menuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
-
+  mobileMenu.querySelectorAll("a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      mobileMenu.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
     });
-
-    mobileMenu.querySelectorAll("a").forEach(function (link) {
-
-      link.addEventListener("click", function () {
-
-        mobileMenu.classList.remove("open");
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      });
-
-    });
-
-  </script>
+  });
+</script>
 
 </body>
-
 </html>
