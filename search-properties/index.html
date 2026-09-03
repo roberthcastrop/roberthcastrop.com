@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,7 +133,7 @@
       right: 20px;
       padding: 12px 20px;
       background: var(--navy);
-      box-shadow: 0 12px 35px rgba(0,0,0,.3);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
     }
 
     .mobile-menu.open {
@@ -142,21 +143,21 @@
     .mobile-menu a {
       display: block;
       padding: 15px 6px;
-      border-bottom: 1px solid rgba(255,255,255,.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       font-size: 13px;
       font-weight: 700;
     }
 
     .hero {
-      min-height: 540px;
+      min-height: 620px;
       display: flex;
       align-items: center;
       color: #ffffff;
       background:
         linear-gradient(
           90deg,
-          rgba(3,15,28,.90),
-          rgba(3,15,28,.38)
+          rgba(3, 15, 28, 0.92),
+          rgba(3, 15, 28, 0.35)
         ),
         url("../luxury-home.jpg");
       background-size: cover;
@@ -185,7 +186,7 @@
     }
 
     .hero p {
-      max-width: 660px;
+      max-width: 680px;
       margin: 0 0 30px;
       font-size: 19px;
       line-height: 1.65;
@@ -199,29 +200,30 @@
 
     .btn {
       display: inline-block;
-      padding: 15px 24px;
-      border: 0;
+      padding: 16px 26px;
+      border: 1px solid var(--gold);
       background: var(--gold);
       color: var(--navy);
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: .7px;
+      letter-spacing: 0.7px;
       cursor: pointer;
-      transition: .25s;
+      transition: 0.25s;
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      opacity: .94;
+      opacity: 0.94;
     }
 
     .btn-white {
       background: #ffffff;
+      border-color: #ffffff;
       color: var(--navy);
     }
 
     .search-intro {
-      padding: 70px 0 45px;
+      padding: 80px 0 55px;
       text-align: center;
       background: #ffffff;
     }
@@ -234,95 +236,143 @@
     }
 
     .search-intro p {
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto;
       color: var(--gray);
       font-size: 16px;
       line-height: 1.75;
     }
 
-    .quick-options {
-      padding: 0 0 55px;
+    .property-types {
+      padding: 0 0 80px;
       background: #ffffff;
     }
 
-    .quick-grid {
+    .property-grid {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
-    .quick-card {
-      padding: 25px 20px;
+    .property-card {
+      display: flex;
+      min-height: 190px;
+      padding: 32px;
+      flex-direction: column;
+      justify-content: flex-end;
       border: 1px solid var(--border);
-      text-align: center;
-      transition: .25s;
-      background: #ffffff;
+      background: var(--light);
+      transition: 0.25s;
     }
 
-    .quick-card:hover {
+    .property-card:hover {
       border-color: var(--gold);
-      transform: translateY(-3px);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
-    .quick-card strong {
-      display: block;
-      margin-bottom: 8px;
+    .property-card .number {
+      margin-bottom: auto;
+      color: var(--gold);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
+      font-size: 28px;
+    }
+
+    .property-card h3 {
+      margin: 20px 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
       font-weight: 400;
     }
 
-    .quick-card small {
+    .property-card p {
+      margin: 0;
       color: var(--gray);
       font-size: 13px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .idx-section {
-      padding: 60px 0 80px;
-      background: var(--light);
-    }
-
-    .idx-header {
-      margin-bottom: 30px;
+    .search-cta {
+      padding: 90px 0;
+      background: var(--navy);
+      color: #ffffff;
       text-align: center;
     }
 
-    .idx-header h2 {
-      margin: 10px 0 12px;
+    .search-cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .search-cta h2 {
+      margin: 12px 0 18px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 40px;
+      font-size: 46px;
+      line-height: 1.15;
       font-weight: 400;
     }
 
-    .idx-header p {
+    .search-cta p {
+      max-width: 680px;
+      margin: 0 auto 30px;
+      color: #dce2e7;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .search-cta .btn {
+      min-width: 230px;
+    }
+
+    .areas {
+      padding: 85px 0;
+      background: #ffffff;
+    }
+
+    .areas-header {
+      margin-bottom: 38px;
+      text-align: center;
+    }
+
+    .areas-header h2 {
+      margin: 10px 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: 400;
+    }
+
+    .areas-header p {
       max-width: 700px;
       margin: 0 auto;
       color: var(--gray);
       line-height: 1.7;
     }
 
-    .idx-wrapper {
-      width: 100%;
-      height: 1900px;
-      background: #ffffff;
-      border: 1px solid #d8d8d8;
-      box-shadow: 0 10px 35px rgba(0,0,0,.07);
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
     }
 
-    .idx-wrapper iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      background: #ffffff;
+    .area {
+      padding: 18px 15px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .area:hover {
+      background: var(--navy);
+      color: #ffffff;
     }
 
     .assistance {
       padding: 80px 0;
-      background: var(--navy);
-      color: #ffffff;
+      background: var(--light);
     }
 
     .assistance-grid {
@@ -342,7 +392,7 @@
     .assistance p {
       max-width: 700px;
       margin: 0;
-      color: #dce2e7;
+      color: var(--gray);
       font-size: 15px;
       line-height: 1.7;
     }
@@ -351,20 +401,6 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-    }
-
-    .idx-disclaimer {
-      padding: 35px 0;
-      background: #ffffff;
-      color: var(--gray);
-      font-size: 11px;
-      line-height: 1.7;
-      text-align: center;
-    }
-
-    .idx-disclaimer p {
-      max-width: 950px;
-      margin: 0 auto;
     }
 
     footer {
@@ -392,11 +428,16 @@
       margin: 6px 0;
       color: #ffffff;
       font-weight: 700;
+      letter-spacing: 0.3px;
     }
 
     .footer-contact {
       text-align: right;
       line-height: 1.8;
+    }
+
+    footer a:hover {
+      color: #ffffff;
     }
 
     .legal-links {
@@ -418,23 +459,23 @@
       }
 
       .hero {
-        min-height: 500px;
+        min-height: 560px;
       }
 
       .hero h1 {
         font-size: 50px;
       }
 
-      .quick-grid {
+      .property-grid {
         grid-template-columns: 1fr;
+      }
+
+      .area-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .assistance-grid {
         grid-template-columns: 1fr;
-      }
-
-      .idx-wrapper {
-        height: 2100px;
       }
 
       .footer-contact {
@@ -459,6 +500,11 @@
 
       .brand small {
         font-size: 8px;
+        letter-spacing: 1.4px;
+      }
+
+      .hero {
+        min-height: 540px;
       }
 
       .hero h1 {
@@ -470,13 +516,24 @@
       }
 
       .search-intro h2,
-      .idx-header h2,
+      .search-cta h2,
+      .areas-header h2,
       .assistance h2 {
         font-size: 34px;
       }
 
-      .idx-wrapper {
-        height: 2300px;
+      .area-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .buttons,
+      .assistance-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -520,30 +577,54 @@
     ]
   }
   </script>
+
 </head>
 
 <body>
 
 <header>
+
   <div class="container">
+
     <nav>
 
       <a class="brand" href="../">
+
         <img src="../logo.png" alt="Roberth Castro logo">
 
         <div>
           ROBERTH CASTRO
           <small>KELLER WILLIAMS CAPITAL REALTY</small>
         </div>
+
       </a>
 
       <div class="menu">
-        <a class="active" href="#property-search">BUY</a>
-        <a href="../sell-your-home-miami/">SELL</a>
-        <a href="../#areas">AREAS</a>
-        <a href="../#about">ABOUT</a>
-        <a href="../#sold">SOLD</a>
-        <a href="../#contact">CONTACT</a>
+
+        <a class="active" href="https://roberthcastrop.kw.com/" target="_blank" rel="noopener">
+          BUY
+        </a>
+
+        <a href="../sell-your-home-miami/">
+          SELL
+        </a>
+
+        <a href="../#areas">
+          AREAS
+        </a>
+
+        <a href="../#about">
+          ABOUT
+        </a>
+
+        <a href="../#sold">
+          SOLD
+        </a>
+
+        <a href="../#contact">
+          CONTACT
+        </a>
+
       </div>
 
       <button
@@ -559,15 +640,35 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#property-search">BUY / SEARCH PROPERTIES</a>
-      <a href="../sell-your-home-miami/">SELL</a>
-      <a href="../#areas">AREAS</a>
-      <a href="../#about">ABOUT</a>
-      <a href="../#sold">SOLD</a>
-      <a href="../#contact">CONTACT</a>
+
+      <a href="https://roberthcastrop.kw.com/" target="_blank" rel="noopener">
+        BUY / SEARCH PROPERTIES
+      </a>
+
+      <a href="../sell-your-home-miami/">
+        SELL
+      </a>
+
+      <a href="../#areas">
+        AREAS
+      </a>
+
+      <a href="../#about">
+        ABOUT
+      </a>
+
+      <a href="../#sold">
+        SOLD
+      </a>
+
+      <a href="../#contact">
+        CONTACT
+      </a>
+
     </div>
 
   </div>
+
 </header>
 
 
@@ -587,14 +688,18 @@
       </h1>
 
       <p>
-        Search current real estate listings throughout Miami and South Florida.
-        Explore homes, condominiums and investment opportunities directly from
-        the MLS.
+        Explore homes, condominiums and real estate opportunities throughout
+        Miami and South Florida with Roberth Castro, REALTOR®.
       </p>
 
       <div class="buttons">
 
-        <a href="#property-search" class="btn">
+        <a
+          href="https://roberthcastrop.kw.com/"
+          target="_blank"
+          rel="noopener"
+          class="btn"
+        >
           SEARCH PROPERTIES
         </a>
 
@@ -624,9 +729,9 @@
     </h2>
 
     <p>
-      Search available properties throughout Miami and South Florida.
-      Browse homes, condos and investment opportunities using the MLS
-      property search below.
+      Search available homes and condos throughout Miami and South Florida.
+      Browse properties by location, price and property type, and contact me
+      directly when you find a property you would like to see.
     </p>
 
   </div>
@@ -634,31 +739,77 @@
 </section>
 
 
-<section class="quick-options">
+<section class="property-types">
 
   <div class="container">
 
-    <div class="quick-grid">
+    <div class="property-grid">
 
-      <a href="#property-search" class="quick-card">
-        <strong>Homes</strong>
-        <small>
-          Search single-family homes throughout Miami and South Florida.
-        </small>
+      <a
+        href="https://roberthcastrop.kw.com/"
+        target="_blank"
+        rel="noopener"
+        class="property-card"
+      >
+
+        <div class="number">
+          01
+        </div>
+
+        <h3>
+          Homes
+        </h3>
+
+        <p>
+          Explore single-family homes throughout Miami and South Florida.
+        </p>
+
       </a>
 
-      <a href="#property-search" class="quick-card">
-        <strong>Condos</strong>
-        <small>
-          Explore condominiums in Miami, Brickell, Miami Beach and beyond.
-        </small>
+
+      <a
+        href="https://roberthcastrop.kw.com/"
+        target="_blank"
+        rel="noopener"
+        class="property-card"
+      >
+
+        <div class="number">
+          02
+        </div>
+
+        <h3>
+          Condos
+        </h3>
+
+        <p>
+          Search condos in Brickell, Miami Beach, Downtown Miami and other
+          South Florida communities.
+        </p>
+
       </a>
 
-      <a href="#property-search" class="quick-card">
-        <strong>Investment Properties</strong>
-        <small>
-          Search real estate opportunities throughout South Florida.
-        </small>
+
+      <a
+        href="https://roberthcastrop.kw.com/"
+        target="_blank"
+        rel="noopener"
+        class="property-card"
+      >
+
+        <div class="number">
+          03
+        </div>
+
+        <h3>
+          Investment Properties
+        </h3>
+
+        <p>
+          Discover real estate opportunities for investors throughout
+          South Florida.
+        </p>
+
       </a>
 
     </div>
@@ -668,39 +819,165 @@
 </section>
 
 
-<section class="idx-section" id="property-search">
+<section class="search-cta">
 
   <div class="container">
 
-    <div class="idx-header">
+    <div class="search-cta-content">
 
       <div class="eyebrow">
-        LIVE MLS SEARCH
+        LIVE PROPERTY SEARCH
       </div>
 
       <h2>
-        Search Available Properties
+        Search Current South Florida Listings
       </h2>
 
       <p>
-        Use the MLS search below to explore current properties throughout
-        Miami and South Florida.
+        Access the current property search to explore available homes,
+        condominiums and real estate opportunities throughout Miami and
+        South Florida.
+      </p>
+
+      <a
+        href="https://roberthcastrop.kw.com/"
+        target="_blank"
+        rel="noopener"
+        class="btn"
+      >
+        SEARCH AVAILABLE PROPERTIES
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="areas">
+
+  <div class="container">
+
+    <div class="areas-header">
+
+      <div class="eyebrow">
+        EXPLORE SOUTH FLORIDA
+      </div>
+
+      <h2>
+        Search by Area
+      </h2>
+
+      <p>
+        Explore some of the communities I serve throughout Miami-Dade,
+        Broward County and South Florida.
       </p>
 
     </div>
 
 
-    <div class="idx-wrapper">
+    <div class="area-grid">
 
-      <iframe
-        src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=d2be1173"
-        width="100%"
-        height="100%"
-        frameborder="0"
-        marginwidth="0"
-        marginheight="0"
-        title="Miami and South Florida MLS Property Search"
-      ></iframe>
+      <a href="../miami-realtor/" class="area">
+        Miami
+      </a>
+
+      <a href="../coral-gables-realtor/" class="area">
+        Coral Gables
+      </a>
+
+      <a href="../coconut-grove-realtor/" class="area">
+        Coconut Grove
+      </a>
+
+      <a href="../pinecrest-realtor/" class="area">
+        Pinecrest
+      </a>
+
+      <a href="../brickell-realtor/" class="area">
+        Brickell
+      </a>
+
+      <a href="../miami-beach-realtor/" class="area">
+        Miami Beach
+      </a>
+
+      <a href="../key-biscayne-realtor/" class="area">
+        Key Biscayne
+      </a>
+
+      <a href="../aventura-realtor/" class="area">
+        Aventura
+      </a>
+
+      <a href="../sunny-isles-beach-realtor/" class="area">
+        Sunny Isles Beach
+      </a>
+
+      <a href="../palmetto-bay-realtor/" class="area">
+        Palmetto Bay
+      </a>
+
+      <a href="../doral-realtor/" class="area">
+        Doral
+      </a>
+
+      <a href="../cutler-bay-realtor/" class="area">
+        Cutler Bay
+      </a>
+
+      <a href="../kendall-realtor/" class="area">
+        Kendall
+      </a>
+
+      <a href="../homestead-realtor/" class="area">
+        Homestead
+      </a>
+
+      <a href="../south-miami-realtor/" class="area">
+        South Miami
+      </a>
+
+      <a href="../miami-shores-realtor/" class="area">
+        Miami Shores
+      </a>
+
+      <a href="../surfside-realtor/" class="area">
+        Surfside
+      </a>
+
+      <a href="../bal-harbour-realtor/" class="area">
+        Bal Harbour
+      </a>
+
+      <a href="../bay-harbor-islands-realtor/" class="area">
+        Bay Harbor Islands
+      </a>
+
+      <a href="../edgewater-realtor/" class="area">
+        Edgewater
+      </a>
+
+      <a href="../downtown-miami-realtor/" class="area">
+        Downtown Miami
+      </a>
+
+      <a href="../wynwood-realtor/" class="area">
+        Wynwood
+      </a>
+
+      <a href="../miramar-realtor/" class="area">
+        Miramar
+      </a>
+
+      <a href="../pembroke-pines-realtor/" class="area">
+        Pembroke Pines
+      </a>
+
+      <a href="../weston-realtor/" class="area">
+        Weston
+      </a>
 
     </div>
 
@@ -718,17 +995,17 @@
       <div>
 
         <div class="eyebrow">
-          NEED HELP FINDING A PROPERTY?
+          LOOKING FOR SOMETHING SPECIFIC?
         </div>
 
         <h2>
-          Let me help you with your search.
+          Let me build the search for you.
         </h2>
 
         <p>
-          Tell me what you're looking for and I can help you identify
-          properties that match your preferred location, budget and
-          real estate goals.
+          Tell me your preferred areas, budget and property requirements.
+          I can help you identify properties that match your goals and
+          coordinate private showings.
         </p>
 
       </div>
@@ -747,23 +1024,6 @@
       </div>
 
     </div>
-
-  </div>
-
-</section>
-
-
-<section class="idx-disclaimer">
-
-  <div class="container">
-
-    <p>
-      Property information displayed through the MLS search is provided for
-      consumers' personal, non-commercial use and may not be used for any
-      purpose other than identifying prospective properties consumers may be
-      interested in purchasing. Information is deemed reliable but is not
-      guaranteed and should be independently verified.
-    </p>
 
   </div>
 
@@ -837,24 +1097,36 @@
 
 
 <script>
+
   const menuButton = document.getElementById("menuButton");
   const mobileMenu = document.getElementById("mobileMenu");
 
   menuButton.addEventListener("click", function () {
+
     const isOpen = mobileMenu.classList.toggle("open");
 
     menuButton.setAttribute(
       "aria-expanded",
       isOpen ? "true" : "false"
     );
+
   });
 
-  mobileMenu.querySelectorAll("a").forEach(function(link) {
-    link.addEventListener("click", function() {
+  mobileMenu.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
       mobileMenu.classList.remove("open");
-      menuButton.setAttribute("aria-expanded", "false");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
     });
+
   });
+
 </script>
 
 </body>
