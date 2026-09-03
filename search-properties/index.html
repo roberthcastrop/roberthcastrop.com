@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Search Properties in Miami & South Florida | Roberth Castro REALTOR®</title>
+
+  <meta
+    name="description"
+    content="Search homes, condos and real estate for sale throughout Miami and South Florida with Roberth Castro, REALTOR® with Keller Williams Capital Realty."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://roberthcastrop.com/search-properties/">
+  <link rel="icon" href="../logo.png">
+
+  <style>
+    :root {
+      --navy: #071b2f;
+      --gold: #c7a04a;
+      --text: #14202e;
+      --gray: #68717c;
+      --light: #f6f6f4;
+      --border: #dedede;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* HEADER */
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 22px 0;
+      color: #ffffff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 4px;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .menu a {
+      transition: 0.2s;
+    }
+
+    .menu a:hover {
+      color: var(--gold);
+    }
+
+    .menu .active {
+      color: var(--gold);
+    }
+
+    .mobile-button {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: #ffffff;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 90px;
+      left: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      background: var(--navy);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 15px 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: 0;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(3, 15, 28, 0.90),
+          rgba(3, 15, 28, 0.38)
+        ),
+        url("../luxury-home.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      padding-top: 80px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin: 15px 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 64px;
+      line-height: 1.05;
+      font-weight: 400;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 0 0 30px;
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border: 0;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.94;
+    }
+
+    .btn-white {
+      background: #ffffff;
+      color: var(--navy);
+    }
+
+    /* SEARCH INTRO */
+
+    .search-intro {
+      padding: 70px 0 45px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .search-intro h2 {
+      margin: 10px 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 44px;
+      font-weight: 400;
+    }
+
+    .search-intro p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--gray);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* QUICK OPTIONS */
+
+    .quick-options {
+      padding: 0 0 55px;
+      background: #ffffff;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .quick-card {
+      padding: 25px 20px;
+      border: 1px solid var(--border);
+      text-align: center;
+      cursor: pointer;
+      transition: 0.25s;
+      background: #ffffff;
+    }
+
+    .quick-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .quick-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-size: 25px;
+    }
+
+    .quick-card strong {
+      display: block;
+      margin-bottom: 7px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 400;
+    }
+
+    .quick-card small {
+      color: var(--gray);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* IDX */
+
+    .idx-section {
+      padding: 60px 0 80px;
+      background: var(--light);
+    }
+
+    .idx-header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .idx-header h2 {
+      margin: 10px 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    .idx-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .idx-wrapper {
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid #d8d8d8;
+      background: #ffffff;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+    }
+
+    .idx-wrapper iframe {
+      display: block;
+      width: 100%;
+      min-height: 1500px;
+      border: 0;
+      background: #ffffff;
+    }
+
+    /* ASSISTANCE */
+
+    .assistance {
+      padding: 80px 0;
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .assistance-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .assistance h2 {
+      margin: 10px 0 15px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: 400;
+    }
+
+    .assistance p {
+      max-width: 700px;
+      margin: 0;
+      color: #dce2e7;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .assistance-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* DISCLAIMER */
+
+    .idx-disclaimer {
+      padding: 35px 0;
+      background: #ffffff;
+      color: var(--gray);
+      font-size: 11px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .idx-disclaimer p {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 0;
+      background: #030f1b;
+      color: #cbd2d9;
+      font-size: 12px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-name {
+      margin-bottom: 6px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .broker-name {
+      margin: 6px 0;
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .footer-contact {
+      text-align: right;
+      line-height: 1.8;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    .legal-links {
+      margin-top: 8px;
+    }
+
+    .legal-links a {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .menu {
+        display: none;
+      }
+
+      .mobile-button {
+        display: block;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .assistance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .idx-wrapper iframe {
+        min-height: 1700px;
+      }
+
+      .footer-contact {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .container {
+        padding: 0 20px;
+      }
+
+      .brand img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .brand small {
+        font-size: 8px;
+        letter-spacing: 1.4px;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .search-intro {
+        padding: 60px 0 35px;
+      }
+
+      .search-intro h2,
+      .idx-header h2,
+      .assistance h2 {
+        font-size: 34px;
+      }
+
+      .idx-section {
+        padding: 45px 0 60px;
+      }
+
+      .idx-wrapper iframe {
+        min-height: 1900px;
+      }
+    }
+
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Roberth Castro",
+    "url": "https://roberthcastrop.com/search-properties/",
+    "telephone": "+17862106833",
+    "email": "rcastrop@kw.com",
+    "description": "Search Miami and South Florida real estate with Roberth Castro, REALTOR with Keller Williams Capital Realty.",
+    "areaServed": [
+      "Miami",
+      "Coral Gables",
+      "Coconut Grove",
+      "Pinecrest",
+      "Brickell",
+      "Miami Beach",
+      "Key Biscayne",
+      "Aventura",
+      "Sunny Isles Beach",
+      "Palmetto Bay",
+      "Doral",
+      "Cutler Bay",
+      "Kendall",
+      "Homestead",
+      "South Miami",
+      "Miami Shores",
+      "Surfside",
+      "Bal Harbour",
+      "Bay Harbor Islands",
+      "Edgewater",
+      "Downtown Miami",
+      "Wynwood",
+      "Miramar",
+      "Pembroke Pines",
+      "Weston",
+      "South Florida"
+    ]
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="container">
+
+      <nav>
+
+        <a class="brand" href="../">
+
+          <img src="../logo.png" alt="Roberth Castro logo">
+
+          <div>
+            ROBERTH CASTRO
+            <small>KELLER WILLIAMS CAPITAL REALTY</small>
+          </div>
+
+        </a>
+
+        <div class="menu">
+
+          <a class="active" href="#property-search">BUY</a>
+
+          <a href="../sell-your-home-miami/">SELL</a>
+
+          <a href="../#areas">AREAS</a>
+
+          <a href="../#about">ABOUT</a>
+
+          <a href="../#sold">SOLD</a>
+
+          <a href="../#contact">CONTACT</a>
+
+        </div>
+
+        <button
+          class="mobile-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+      </nav>
+
+      <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#property-search">BUY / SEARCH PROPERTIES</a>
+
+        <a href="../sell-your-home-miami/">SELL</a>
+
+        <a href="../#areas">AREAS</a>
+
+        <a href="../#about">ABOUT</a>
+
+        <a href="../#sold">SOLD</a>
+
+        <a href="../#contact">CONTACT</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          MIAMI & SOUTH FLORIDA REAL ESTATE
+        </div>
+
+        <h1>
+          Find Your Next<br>
+          Property
+        </h1>
+
+        <p>
+          Search current real estate listings throughout Miami and South Florida.
+          Explore homes, condominiums and investment opportunities directly from
+          the MLS.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#property-search" class="btn">
+            SEARCH PROPERTIES
+          </a>
+
+          <a href="tel:+17862106833" class="btn btn-white">
+            CALL ROBERTH
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="search-intro">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        PROPERTY SEARCH
+      </div>
+
+      <h2>
+        Explore Miami & South Florida Real Estate
+      </h2>
+
+      <p>
+        Use the MLS search below to explore available properties throughout
+        South Florida. Search by location, price, property type, bedrooms,
+        bathrooms and other criteria to find properties that match your goals.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUICK OPTIONS -->
+
+  <section class="quick-options">
+
+    <div class="container">
+
+      <div class="quick-grid">
+
+        <a href="#property-search" class="quick-card">
+
+          <span>⌂</span>
+
+          <strong>Homes</strong>
+
+          <small>
+            Search single-family homes throughout Miami and South Florida.
+          </small>
+
+        </a>
+
+
+        <a href="#property-search" class="quick-card">
+
+          <span>◇</span>
+
+          <strong>Condos</strong>
+
+          <small>
+            Explore condominiums in Miami, Brickell, Miami Beach and beyond.
+          </small>
+
+        </a>
+
+
+        <a href="#property-search" class="quick-card">
+
+          <span>↗</span>
+
+          <strong>Investment Properties</strong>
+
+          <small>
+            Search real estate opportunities throughout South Florida.
+          </small>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- IDX SEARCH -->
+
+  <section class="idx-section" id="property-search">
+
+    <div class="container">
+
+      <div class="idx-header">
+
+        <div class="eyebrow">
+          LIVE MLS SEARCH
+        </div>
+
+        <h2>
+          Search Available Properties
+        </h2>
+
+        <p>
+          Adjust the search criteria below to explore current listings and
+          discover properties throughout Miami and South Florida.
+        </p>
+
+      </div>
+
+
+      <div class="idx-wrapper">
+
+        <iframe
+          src="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=8bcd1dd2"
+          width="100%"
+          height="1500"
+          title="Miami and South Florida MLS Property Search"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ASSISTANCE -->
+
+  <section class="assistance">
+
+    <div class="container">
+
+      <div class="assistance-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            NEED HELP FINDING A PROPERTY?
+          </div>
+
+          <h2>
+            Let me help you with your search.
+          </h2>
+
+          <p>
+            If you find a property you like—or if you want me to build a
+            personalized search based on your budget, preferred areas and
+            property requirements—contact me directly.
+          </p>
+
+        </div>
+
+
+        <div class="assistance-buttons">
+
+          <a href="tel:+17862106833" class="btn">
+            (786) 210-6833
+          </a>
+
+          <a href="mailto:rcastrop@kw.com" class="btn btn-white">
+            EMAIL ROBERTH
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- IDX DISCLAIMER -->
+
+  <section class="idx-disclaimer">
+
+    <div class="container">
+
+      <p>
+        Property information displayed through the MLS search is provided for
+        consumers' personal, non-commercial use and may not be used for any
+        purpose other than identifying prospective properties consumers may be
+        interested in purchasing. Information is deemed reliable but is not
+        guaranteed and should be independently verified.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-row">
+
+        <div>
+
+          <div class="footer-name">
+            Roberth Castro, REALTOR®
+          </div>
+
+          <div class="broker-name">
+            Keller Williams Capital Realty
+          </div>
+
+          <div>
+            Florida License #3467807
+          </div>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+          <div>
+            <a href="tel:+17862106833">
+              (786) 210-6833
+            </a>
+          </div>
+
+          <div>
+            <a href="mailto:rcastrop@kw.com">
+              rcastrop@kw.com
+            </a>
+          </div>
+
+          <div>
+            <a href="https://roberthcastrop.com/">
+              roberthcastrop.com
+            </a>
+          </div>
+
+          <div class="legal-links">
+
+            <a href="../privacy-policy.html">
+              Privacy Policy
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="../sms-terms.html">
+              SMS Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", function () {
+
+      const isOpen = mobileMenu.classList.toggle("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+    });
+
+
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        mobileMenu.classList.remove("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>
